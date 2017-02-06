@@ -6,11 +6,13 @@ published: true
 
 Matthieu Cadet
 ==============
-
+<img title=""
+     class="float-this film-thumb"
+     src="/static/matthieu-cadet-portrait.png">
 _Senior Compositing Artist & Technical Director &mdash; 10 ans d'expérience._
 
-En poste à <a href="http://nWave.com" target="_blank">nWave Digital</a>
-(2006 &ndash; {{ site.time | date: '%Y' }}), au département “Compositing”
+En poste à <a href="http://www.nwave.com/" target="_blank">nWave Digital</a>
+(2006 &ndash; 2017), au département “Compositing”
 où ont lieu une variété de post-traitements sur les jeux d'images issues
 du “Lighting”. Rôle clé dans la mise en oeuvre des processus de traitement par
 la réalisation d'outils (en Python principalement) .....
@@ -60,13 +62,13 @@ Connaissances Techniques
 
 <img title="The Son of Bigfoot"
      class="float-this film-thumb"
-     src="http://www.nwavedigital.com/cms/pictures/library/films/posters/Poster_portrait_SOB_HomeMade_180x268.jpg">
+     src="/static/son-of-bigfoot-poster.jpg">
 
 *The Son of Bigfoot* / long metrage d'animation 3D
 
 - Compositing 3D & Stereo
 - Developement du pipeline Nuke & Davinci Resolve
-- Developement d'outils de suivi de plans
+- Developement d'outils interne de suivi de production
 
 <div style="clear: both;"></div>
 
@@ -76,9 +78,9 @@ Connaissances Techniques
 
 *Robinson Crusoe* / long metrage d'animation 3D
 
-<img title="robinsoncrusoe"
+<img title="Robinson Crusoe"
      class="float-this film-thumb"
-     src="http://fr.web.img4.acsta.net/pictures/16/03/24/09/11/213315.jpg">
+     src="/static/robinson-crusoe-poster.jpg">
 
 - Compositing 3D & Stereo
 - Developement d'outils interne
@@ -91,7 +93,7 @@ Connaissances Techniques
 
 <img title="The House of Magic"
      class="float-this film-thumb"
-     src="http://image-store.slidesharecdn.com/8453b652-25e2-11e3-a88a-22000aa5108a-large.jpg">
+     src="/static/house-of-magic-poster.jpg">
 
 - Compositing 3D & Stereo
 - Developement d'outils interne
@@ -106,7 +108,7 @@ Connaissances Techniques
 
 <img title="Sammy 2 “3D”"
      class="float-this film-thumb"
-     src="http://image-store.slidesharecdn.com/fba33394-25e3-11e3-805b-22000aa5129e-large.jpg">
+     src="/static/sammy2-poster.jpg">
 
 - Compositing 3D & Stereo
 - Developement d'outils interne
@@ -117,11 +119,11 @@ Connaissances Techniques
 ### Senior Compositing Artist TD & Pipeline Developer
 <span class="cv-when-where">March 2010 &ndash; September 2010 (7 months) | *nWave Digital*</span>
 
-*The little prince ( Le Petit Prince )* / Attraction 3D Stereoscopique
+*The Little Prince ( Le Petit Prince )* / Attraction 3D Stereoscopique
 
 <img title="The Little Prince"
      class="float-this film-thumb"
-     src="http://image-store.slidesharecdn.com/5e853ad0-25e3-11e3-beb4-12313b087694-large.jpg">
+     src="/static/the-little-prince-poster.jpg">
 
 - Compositing 3D & Stereo
 - Developement d'outils interne
@@ -132,11 +134,11 @@ Connaissances Techniques
 ### Senior Compositing Artist TD & Pipeline Developer
 <span class="cv-when-where">November 2009 &ndash; March 2010 (5 months) | *nWave Digital*</span>
 
-*Pirates Stroy 4D ( Le Petit Prince )* / Attraction 3D Stereoscopique
+*Pirates Stroy 4D* / Attraction 3D Stereoscopique
 
-<img title="Pirates Story"
+<img title="Pirates Story 4D"
      class="float-this film-thumb"
-     src="http://image-store.slidesharecdn.com/688dca2e-25e3-11e3-a0e4-22000aa5129e-large.jpg">
+     src="/static/pirates-story-poster.jpg">
 
 - Compositing 3D & Stereo
 - Developement d'outils interne
@@ -147,11 +149,11 @@ Connaissances Techniques
 ### Senior Compositing Artist TD & Pipeline Developer
 <span class="cv-when-where">January 2008 &ndash; November 2009 (1 year 11 months) | *nWave Digital*</span>
 
-*A Turtle's Tale ( Le voyage extraordinaire de Samy )* / long metrage d'animation 3D
+*A Turtle's Tale ( Le Voyage Extraordinaire de Samy )* / long metrage d'animation 3D
 
 <img title="A turtle's tale"
      class="float-this film-thumb"
-     src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjEzNjAwMjU4Nl5BMl5BanBnXkFtZTcwNTcwMDU1Mw@@._V1_UY268_CR3,0,182,268_AL_.jpg">
+     src="/static/sammy1-poster.jpg">
 
 - Compositing 3D & Stereo
 - Developement d'outils interne
@@ -164,9 +166,9 @@ Connaissances Techniques
 
 *Fly me to the moon* / long metrage d'animation 3D
 
-<img title="Fly me to the moon"
+<img title="Fly Me To The Moon"
      class="float-this film-thumb"
-     src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTc2NTA5MTA2Ml5BMl5BanBnXkFtZTcwMjU5ODQ3MQ@@._V1_UX182_CR0,0,182,268_AL_.jpg">
+     src="/static/fly-me-to-the-moon-poster.jpg">
 
 
 - Compositing 3D & Stereo
@@ -178,7 +180,7 @@ Connaissances Techniques
 Formation
 ---------
 
-__2002&ndash;2005__ | etc... | École Supérieure des Métiers Artistiques (ESMA)<br><small>Montpellier</small>
+__2002&ndash;2005__ | Diplomé du Cycle Professionnel Cinéma d'animation 3D et Effets Spéciaux | École Supérieure des Métiers Artistiques (<a href="http://www.esma-artistique.com/">ESMA</a>)<br><small>Montpellier</small>
 __2001&ndash;2004__ | Bac STI Arts Appliques | Lycee Ambroise Vollard<br><small>Saint-Pierre, Île de La Réunion</small>
 
 
@@ -189,5 +191,3 @@ Loisirs
 - Photographie numerique & argentique
 - Travaux de menuiserie & ebenisterie
 - Électronique
-
-<strong>FIN</strong>
