@@ -26,6 +26,14 @@
 	height: 100px;
 	}
 
+@media (min-width: 30em) {
+  .sidebar-logo {
+	margin: 2em;
+	width: 65px;
+	height: 35px;
+	}
+}
+
 /*
    See default.html & _config.yml
  */
