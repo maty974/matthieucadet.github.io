@@ -1,0 +1,25 @@
+---
+layout: page
+title: My Gist
+permalink: /gist/
+gist_user: maty974
+my_gists:
+  - id: c076ff829063f70db3d9
+    title: Nuke update fbx knobs without popup message
+    description: dummy
+  - id: 4739917
+    title: setNukeZeroMarginsWidget
+    description: dummy
+  - id: 99d41786f1dc5f1b729c
+    title: Hide Nuke viewer widgets
+    description: Hide all Nuke Viewer Qt Infos Widgets
+---
+
+<ul>
+  {% for mgist in page.my_gists %}
+    <p></p>
+    <p>{{ mgist.title }}</p>
+    <script src="https://gist.github.com/{{ page.gist_user }}/{{ mgist.id }}.js"> </script>
+  {% endfor %}
+</ul>
+

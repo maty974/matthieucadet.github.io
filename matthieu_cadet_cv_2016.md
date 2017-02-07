@@ -1,7 +1,7 @@
 ---
 layout: curriculum
 title: Curriculum Vitae
-published: true
+permalink: /cv/
 ---
 
 Matthieu Cadet

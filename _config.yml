@@ -6,8 +6,6 @@ permalink: pretty
 gems:
   - jekyll-paginate
   - jekyll-sitemap
-  # Font Awesome GEM // UNUSED // see _includes/head.html
-  #- font-awesome-sass
 
 # Setup
 title: Matthieu Cadet
@@ -41,11 +39,8 @@ author:
   url:               http://matthieucadet.info
   email:             matthieu.cadet@gmail.com
 
-# Custom vars
-version:             1.0.0
 
 twitter_username: maty974
-
 github_repo: maty974.github.com
 github_username: maty974
 github_show_edit_link: true
