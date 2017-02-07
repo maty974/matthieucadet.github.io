@@ -21,7 +21,7 @@ description: |
     Senior Compositing Artist, Technical Director & Pipeline Developer
     at <a href="http://nWave.com" target="_blank">nWave Digital</a> (Brussels, Belgium).
 
-url:                 http://maty974.github.io
+url:                 http://matthieucadet.info
 baseurl:             ''
 paginate:            5
 
@@ -38,7 +38,7 @@ tracking_id: UA-69243698-7 # GA Tracking ID
 # About/contact
 author:
   name:              Matthieu Cadet
-  url:               http://maty974.github.io
+  url:               http://matthieucadet.info
   email:             matthieu.cadet@gmail.com
 
 # Custom vars
