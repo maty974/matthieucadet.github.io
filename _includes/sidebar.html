@@ -82,6 +82,14 @@
            class="fa fa-instagram"><!--{{ site.author.instagram_username }}--></a>
       </li>
       {% endif %}
+      
+      {% if site.author.tel %}
+      <li>
+        <a href="tel:{{ site.author.tel }}" rel="nofollow">
+           title="Call me!"
+           class="fa fa-phone-square"><!--{{ site.author.tel }}--></a>
+      </li>
+      {% endif %}
     </ul>
   </div>
 
