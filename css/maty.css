@@ -1,6 +1,7 @@
 /*
    Maty/974 CSS
  */
+
 .run-974 {
   color: inherit;
   font-size: small;
@@ -51,23 +52,23 @@
   bottom: 0;
 }
 
-ul.sidebar-social-links {
+ul.sidebar-sc-url {
   list-style: none;
   padding: 0;
   text-align: center;
 }
 
-ul.sidebar-social-links > li {
+ul.sidebar-sc-url > li {
   display: inline;
   margin: 0 .5em;
 }
 
-.sidebar-social-links a {
+.sidebar-sc-url a {
   font-size: 2em;
   text-decoration: none;
 }
 
-.sidebar-social-links a:hover {
+.sidebar-sc-url a:hover {
   color: #268bd2;
 }
 
