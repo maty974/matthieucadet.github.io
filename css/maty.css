@@ -1,7 +1,6 @@
 /*
    Maty/974 CSS
  */
-
 .run-974 {
   color: inherit;
   font-size: small;
@@ -15,23 +14,24 @@
 }
 
 .rounded-logo {
-	border-radius: 20%;
-	-webkit-border-radius: 20%;
-	-moz-border-radius: 20%;
-	}
+  border-radius: 20%;
+  -webkit-border-radius: 20%;
+  -moz-border-radius: 20%;
+}
 
 .sidebar-logo {
-	margin: 2em;
-	width: 100px;
-	height: 100px;
-	}
+  margin: 2em;
+  width: 100px;
+  height: 100px;
+}
 
-@media (min-width: 30em) {
+@media (min-width:30em) {
   .sidebar-logo {
-	margin: 2em;
-	width: 65px;
-	height: 35px;
-	}
+    margin: 2em;
+    width: 65px;
+    height: 35px;
+  }
+
 }
 
 /*
@@ -56,14 +56,17 @@ ul.sidebar-social-links {
   padding: 0;
   text-align: center;
 }
+
 ul.sidebar-social-links > li {
   display: inline;
   margin: 0 .5em;
 }
+
 .sidebar-social-links a {
   font-size: 2em;
   text-decoration: none;
 }
+
 .sidebar-social-links a:hover {
   color: #268bd2;
 }
@@ -78,8 +81,7 @@ ul.sidebar-social-links > li {
 }
 
 .cv h3 {
-  border-bottom: 1px solid #555;
-  /*background-color: #f5f5f5;*/
+  border-bottom: 1px solid #555;  /*background-color: #f5f5f5;*/
 }
 
 .float-this {
@@ -87,5 +89,5 @@ ul.sidebar-social-links > li {
 }
 
 .film-thumb {
-    max-width: 100px;
+  max-width: 100px;
 }
