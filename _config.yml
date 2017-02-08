@@ -7,6 +7,8 @@ gems:
   - jekyll-paginate
   - jekyll-sitemap
 
+github_show_edit_link: true
+
 # Setup
 title: Matthieu Cadet
 
@@ -35,17 +37,13 @@ tracking_id: UA-91587914-1 # GA Tracking ID
 
 # About/contact
 author:
-  name:              Matthieu Cadet
-  url:               http://matthieucadet.info
-  email:             matthieu.cadet@gmail.com
-
-
-twitter_username: maty974
-github_repo: maty974.github.com
-github_username: maty974
-github_show_edit_link: true
-
-linkedin_username: matthieucadet
-flickr_username: maty974
-#facebook_id: maty974
-#instagram_username: maty974
+  name:               Matthieu Cadet
+  url:                http://matthieucadet.info
+  email:              matthieu.cadet@gmail.com
+  twitter_username:   maty974
+  github_repo:        maty974.github.com
+  github_username:    maty974
+  linkedin_username:  matthieucadet
+  flickr_username:    maty974
+  facebook_username:  maty974
+  instagram_username: maty974
