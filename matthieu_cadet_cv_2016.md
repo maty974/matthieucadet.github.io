@@ -58,7 +58,7 @@ Connaissances Techniques
 -------------------------
 
 ### Senior Compositing Artist TD & Pipeline Developer
-<span class="cv-when-where">2015 &ndash; 2016 | *nWave Digital*</span>
+<span class="cv-when-where">2015 &ndash; 2016 | <a href="http://www.nwave.com/" target="_blank">nWave Digital</a></span>
 
 <img title="The Son of Bigfoot"
      class="float-this film-thumb"
@@ -74,7 +74,7 @@ Connaissances Techniques
 
 
 ### Senior Compositing Artist TD & Pipeline Developer
-<span class="cv-when-where">October 2013 &ndash; October 2015 (2 years 1 month) | *nWave Digital*</span>
+<span class="cv-when-where">October 2013 &ndash; October 2015 (2 years 1 month) | <a href="http://www.nwave.com/" target="_blank">nWave Digital</a></span>
 
 *Robinson Crusoe* / long metrage d'animation 3D
 
@@ -89,7 +89,7 @@ Connaissances Techniques
 
 
 ### Senior Compositing Artist TD & Pipeline Developer
-<span class="cv-when-where">May 2012 &ndash; October 2013 (1 year 6 months) | *nWave Digital*</span>
+<span class="cv-when-where">May 2012 &ndash; October 2013 (1 year 6 months) | <a href="http://www.nwave.com/" target="_blank">nWave Digital</a></span>
 
 <img title="The House of Magic"
      class="float-this film-thumb"
@@ -102,7 +102,7 @@ Connaissances Techniques
 
 
 ### Senior Compositing Artist TD & Pipeline Developer
-<span class="cv-when-where">October 2010 &ndash; May 2012 (1 year 8 months) | *nWave Digital*</span>
+<span class="cv-when-where">October 2010 &ndash; May 2012 (1 year 8 months) | <a href="http://www.nwave.com/" target="_blank">nWave Digital</a></span>
 
 *A Turtle's Tale 2 ( Sammy 2 )* / long metrage d'animation 3D
 
@@ -117,7 +117,7 @@ Connaissances Techniques
 
 
 ### Senior Compositing Artist TD & Pipeline Developer
-<span class="cv-when-where">March 2010 &ndash; September 2010 (7 months) | *nWave Digital*</span>
+<span class="cv-when-where">March 2010 &ndash; September 2010 (7 months) | <a href="http://www.nwave.com/" target="_blank">nWave Digital</a></span>
 
 *The Little Prince ( Le Petit Prince )* / Attraction 3D Stereoscopique
 
@@ -132,7 +132,7 @@ Connaissances Techniques
 
 
 ### Senior Compositing Artist TD & Pipeline Developer
-<span class="cv-when-where">November 2009 &ndash; March 2010 (5 months) | *nWave Digital*</span>
+<span class="cv-when-where">November 2009 &ndash; March 2010 (5 months) | <a href="http://www.nwave.com/" target="_blank">nWave Digital</a></span>
 
 *Pirates Stroy 4D* / Attraction 3D Stereoscopique
 
@@ -147,7 +147,7 @@ Connaissances Techniques
 
 
 ### Senior Compositing Artist TD & Pipeline Developer
-<span class="cv-when-where">January 2008 &ndash; November 2009 (1 year 11 months) | *nWave Digital*</span>
+<span class="cv-when-where">January 2008 &ndash; November 2009 (1 year 11 months) | <a href="http://www.nwave.com/" target="_blank">nWave Digital</a></span>
 
 *A Turtle's Tale ( Le Voyage Extraordinaire de Samy )* / long metrage d'animation 3D
 
@@ -162,7 +162,7 @@ Connaissances Techniques
 
 
 ### Senior Compositing Artist TD & Pipeline Developer
-<span class="cv-when-where">May 2006 &ndash; August 2007 (1 year 4 months) | *nWave Digital*</span>
+<span class="cv-when-where">May 2006 &ndash; August 2007 (1 year 4 months) | <a href="http://www.nwave.com/" target="_blank">nWave Digital</a></span>
 
 *Fly me to the moon* / long metrage d'animation 3D
 
@@ -180,7 +180,7 @@ Connaissances Techniques
 Formation
 ---------
 
-__2002&ndash;2005__ | Diplomé du Cycle Professionnel Cinéma d'animation 3D et Effets Spéciaux | École Supérieure des Métiers Artistiques (<a href="http://www.esma-artistique.com/">ESMA</a>)<br><small>Montpellier</small>
+__2002&ndash;2005__ | Diplomé du Cycle Professionnel Cinéma d'animation 3D et Effets Spéciaux | École Supérieure des Métiers Artistiques (<a href="http://www.esma-artistique.com/" target="_blank">ESMA</a>)<br><small>Montpellier</small>
 __2001&ndash;2004__ | Bac STI Arts Appliques | Lycee Ambroise Vollard<br><small>Saint-Pierre, Île de La Réunion</small>
 
 
