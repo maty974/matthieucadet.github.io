@@ -41,6 +41,18 @@
       })(document);
     </script>
 
+    {% if page.gallery_compare %}
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+      <script src="{{ "/assets/jquery.event.move.js" | relative_url }}"></script>
+      <script src="{{ "/assets/jquery.twentytwenty.js" | relative_url }}"></script>
+      <script>
+      $(window).load(function(){
+        $(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.7});
+        $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'});
+      });
+      </script>
+    {% endif %}
+
     {% include disqus.html %}
 
     {% if site.tracking_id %}

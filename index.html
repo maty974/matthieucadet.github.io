@@ -15,26 +15,23 @@ title: Home
         <div class="container">
             <ul class="sidebar-sc-url">
                 {% if site.author.email %}
-                    <li>
-                        <a href="mailto: {{ site.author.email }}"
-                            title="M'ecrire un email">
-                            <span class="fa fa-envelope"></span>
-                        </a>
-                    </li>
+                <li>
+                    <a href="mailto: {{ site.author.email }}" title="M'ecrire un email">
+                        <span class="fa fa-envelope"></span>
+                    </a>
+                </li>
+                {% endif %} {% if site.author.tel %}
+                <li>
+                    <a href="tel:{{ site.author.tel }}" rel="nofollow" title="Appellez moi" class="fa fa-phone-square">
+                        <!--{{ site.author.tel }}-->
+                    </a>
+                </li>
                 {% endif %}
-                {% if site.author.tel %}
-                    <li>
-                        <a href="tel:{{ site.author.tel }}" rel="nofollow"
-                            title="Appellez moi"
-                            class="fa fa-phone-square"><!--{{ site.author.tel }}--></a>
-                        </li>
-                    {% endif %}
-                    <li>
-                        <a href="/cv"
-                            title="Curriculm Vitae"
-                        class="fa fa-file-text"></a>
-                    </li>
-                </ul>
-            </div>
+                <li>
+                    <a href="/cv" title="Curriculm Vitae" class="fa fa-file-text"></a>
+                </li>
+            </ul>
         </div>
     </div>
+</div>
+
