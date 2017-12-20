@@ -7,6 +7,9 @@ gems:
   - jekyll-paginate
   - jekyll-sitemap
 
+sass:
+    sass_dir: _sass
+
 github_show_edit_link: true
 
 # Setup
@@ -44,7 +47,7 @@ author:
   github_repo:        maty974.github.com
   github_username:    maty974
   linkedin_username:  matthieucadet
-  flickr_username:    maty974
-  facebook_username:  maty974
-  instagram_username: maty974
+  #flickr_username:    maty974
+  #facebook_username:  maty974
+  #instagram_username: maty974
   tel:                +32 472 623 242

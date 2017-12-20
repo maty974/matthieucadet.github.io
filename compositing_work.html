@@ -12,10 +12,9 @@ permalink: /work/compositing/
         {% assign project_image = site.data.projects[project.project].image %}
         {% assign project_title = site.data.projects[project.project].title %}
 
-        <img title="Fly Me To The Moon"
-         src="/static/{{ project_image }}" width="180px">
         <div>
             <h3>{{ project_title }}</h3>
+            <img title="{{ project_title }}" src="/static/movie_posters/{{ project_image }}" width="180px">
             <p>Avant & Apres Lighting/Compositing</p>
         </div>
 
