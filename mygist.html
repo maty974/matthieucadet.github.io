@@ -18,9 +18,8 @@ my_gists:
 
 <ul>
   {% for mgist in page.my_gists %}
-    <p></p>
     <p>{{ mgist.title }}</p>
-    <script src="https://gist.github.com/{{ page.gist_user }}/{{ mgist.id }}.js"> </script>
+    {% gist mgist.id %}
   {% endfor %}
 </ul>
 
