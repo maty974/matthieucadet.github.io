@@ -3,7 +3,7 @@
 # Use of `relative_permalinks` ensures post links from the index work properly.
 permalink: pretty
 
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
@@ -22,7 +22,6 @@ tagline: |
 
 description: |
     Senior Compositing Artist, Technical Director & Pipeline Developer
-    at <a href="http://nWave.com" target="_blank">nWave Digital</a> (Brussels, Belgium).
 
 url:                 http://matthieucadet.info
 baseurl:             ''
@@ -51,3 +50,5 @@ author:
   #facebook_username:  maty974
   #instagram_username: maty974
   tel:                +32 472 623 242
+  location: Brussels,Belgium
+  current_studio: <a href="http://www.nwave.com" target="_blank">nWave Digital</a>

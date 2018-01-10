@@ -9,7 +9,7 @@
   </div>
   <div class="sidebar-item">
     <strong class="author">{{ site.author.name }}</strong>
-    <p>{{ site.description }}</p>
+    <p>{{ site.description }} at {{ site.author.current_studio }} {{ site.author.location }}</p>
   </div>
 
   <nav class="sidebar-nav">
@@ -47,6 +47,7 @@
       <li>
         <a href="https://www.linkedin.com/in/{{ site.author.linkedin_username }}/"
            title="LinkedIn profile of {{ site.author.linkedin_username }}"
+           target="_blank"
            class="fa fa-linkedin-square"><!--{{ site.author.linkedin_username }}--></a>
       </li>
       {% endif %}
@@ -55,6 +56,7 @@
       <li>
         <a href="https://github.com/{{ site.author.github_username }}/"
            title="Github page of {{ site.author.github_username }}"
+           target="_blank"
            class="fa fa-github-square"><!--{{ site.author.github_username }}--></a>
       </li>
       {% endif %}
@@ -63,6 +65,7 @@
       <li>
         <a href="https://www.facebook.com/{{ site.author.facebook_username }}/"
            title="Facebook profile of {{ site.author.facebook_username }}"
+           target="_blank"
            class="fa fa-facebook-square"><!--{{ site.author.facebook_username }}--></a>
       </li>
       {% endif %}
@@ -71,6 +74,7 @@
       <li>
         <a href="https://www.flickr.com/photos/{{ site.author.flickr_username }}/"
            title="Flickr photostream of {{ site.author.flickr_username }}"
+           target="_blank"
            class="fa fa-flickr"><!--{{ site.author.flickr_username }}--></a>
       </li>
       {% endif %}
@@ -79,6 +83,7 @@
       <li>
         <a href="https://www.instagram.com/{{ site.author.instagram_username }}/"
            title="Instagram photostream of {{ site.author.instagram_username }}"
+           target="_blank"
            class="fa fa-instagram"><!--{{ site.author.instagram_username }}--></a>
       </li>
       {% endif %}
