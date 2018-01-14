@@ -11,7 +11,7 @@ Matthieu Cadet
      src="/static/matthieu-cadet-portrait.png">
 _Senior Compositing Artist & Technical Director &mdash; 10 ans d'expérience._
 
-En poste à <a href="http://www.nwave.com/" target="_blank">nWave Digital</a>
+En poste à {{ site.author.current_studio }}
 (2006 &ndash; 2017), au département “Compositing”
 où ont lieu une variété de post-traitements sur les jeux d'images issues
 du “Lighting”. Rôle clé dans la mise en oeuvre des processus de traitement par

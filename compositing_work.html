@@ -9,26 +9,17 @@ permalink: /work/compositing/
 <!-- TODO: put each compare in a image slider https://github.com/jekylltools/jekyll-ideal-image-slider-include -->
 
 <div class="row" style="margin-top: 2em;">
-
-    {% for project in site.data.compositing_work %}
-        {% assign project_image = site.data.projects[project.project].image %}
-        {% assign project_title = site.data.projects[project.project].title %}
-
         <div>
-            <h3>{{ project_title }}</h3>
-            <img title="{{ project_title }}" src="/static/movie_posters/{{ project_image }}" width="180px">
             <p>Avant & Apres Lighting/Compositing</p>
         </div>
-
         <div>
-        {% for file in project.files %}
+        {% for file in site.data.compositing_work.compare_files %}
             <div class="twentytwenty-container">
-                <img src="/static/compositing_work/{{ project.project }}/{{ file }}_precomp.jpg"/>
-                <img src="/static/compositing_work/{{ project.project }}/{{ file }}_final.jpg"/>
+                <img src="/static/compositing_work/{{ file }}_precomp.jpg"/>
+                <img src="/static/compositing_work/{{ file }}_final.jpg"/>
             </div>
             <p></p>
         {% endfor %}
         </div>
-    {% endfor %}
 </div>
 

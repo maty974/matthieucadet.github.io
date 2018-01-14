@@ -4,9 +4,11 @@
 permalink: pretty
 
 plugins:
+  - jekyll-assets
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
+  - jekyll-seo-tag
 
 sass:
     sass_dir: _sass

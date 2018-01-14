@@ -1,5 +1,3 @@
-- project: enchaunted
-  icon: house-of-magic-poster.jpg
-  files:
-    - test1
-    - '130_0040'
+compare_files:
+  - test1
+  - '130_0040'
