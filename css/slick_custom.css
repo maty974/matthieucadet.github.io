@@ -1,0 +1,33 @@
+/*
+   Maty/974 CSS
+ */
+
+.slick-prev,
+.slick-next
+{
+  width: 40px;
+  height: 40px;
+  color: black;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+  color: black;
+  font-size: 40px;
+}
+
+.slick-prev
+{
+    left: -45px;
+}
+
+.slick-next
+{
+    right: -45px;
+}
+
+.slick-dots li button:before
+{
+    font-size: 15px;
+}

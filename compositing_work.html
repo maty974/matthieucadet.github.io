@@ -1,25 +1,29 @@
 ---
 layout: page
-published: true
+published: false
 title: Compositing Work
 gallery_compare: true
 permalink: /work/compositing/
 ---
 
-<!-- TODO: put each compare in a image slider https://github.com/jekylltools/jekyll-ideal-image-slider-include -->
-
 <div class="row" style="margin-top: 2em;">
-        <div>
-            <p>Avant & Apres Lighting/Compositing</p>
-        </div>
-        <div>
+    <div class="container">
+      <div class="single-item">
         {% for file in site.data.compositing_work.compare_files %}
             <div class="twentytwenty-container">
                 <img src="/static/compositing_work/{{ file }}_precomp.jpg"/>
                 <img src="/static/compositing_work/{{ file }}_final.jpg"/>
             </div>
-            <p></p>
         {% endfor %}
-        </div>
+      </div>
+      <p></p>
+      <div class="items-nav">
+        {% for file in site.data.compositing_work.compare_files %}
+            <div>
+                <img src="/static/compositing_work/{{ file }}_final.jpg"/>
+            </div>
+        {% endfor %}
+      </div>
+    </div>
 </div>
 
