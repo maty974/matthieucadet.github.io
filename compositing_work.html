@@ -1,6 +1,6 @@
 ---
 layout: page
-published: false
+published: true
 title: Compositing Work
 gallery_compare: true
 permalink: /work/compositing/
@@ -11,16 +11,16 @@ permalink: /work/compositing/
       <div class="single-item">
         {% for file in site.data.compositing_work.compare_files %}
             <div class="twentytwenty-container">
-                <img src="/static/compositing_work/{{ file }}_precomp.jpg"/>
-                <img src="/static/compositing_work/{{ file }}_final.jpg"/>
+                <img src="/static/compositing_work/slider-sized/{{ file }}_int_precomp_lgt_l.jpg"/>
+                <img src="/static/compositing_work/slider-sized/{{ file }}_int_final_l.jpg"/>
             </div>
         {% endfor %}
       </div>
       <p></p>
-      <div class="items-nav">
+      <div class="items-nav lazy">
         {% for file in site.data.compositing_work.compare_files %}
             <div>
-                <img src="/static/compositing_work/{{ file }}_final.jpg"/>
+                <img data-lazy="/static/compositing_work/thumbnails-nav/{{ file }}_int_final_l.jpg"/>
             </div>
         {% endfor %}
       </div>

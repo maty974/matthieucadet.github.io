@@ -1,3 +1,6 @@
+---
+---
+
 /*
    Maty/974 CSS
  */
@@ -13,7 +16,11 @@
 .slick-prev:before,
 .slick-next:before
 {
+{% if page.gallery_compare %}
+  color: #fbfafa;
+{% else %}
   color: black;
+{% endif %}
   font-size: 40px;
 }
 
