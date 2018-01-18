@@ -1,0 +1,99 @@
+---
+layout: default-fp
+title: Home (fullpage.js slider "thing")
+tags: [wide]
+---
+
+<!-- https://alvarotrigo.com/fullPage/ -->
+
+<div id="fullpage">
+  <!-- + ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ +
+       | First section == DEMOREEL |
+       + ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ + -->
+	<div class="section active">
+    {% include demo_reel.html %}
+    <div class="container">
+      <ul class="sidebar-sc-url">
+        {% if site.author.email %}
+        <li>
+          <a href="mailto: {{ site.author.email }}" title="M'ecrire un email">
+            <span class="fa fa-envelope"></span>
+          </a>
+        </li>
+        {% endif %} {% if site.author.tel %}
+        <li>
+          <a href="tel:{{ site.author.tel }}" rel="nofollow" title="Appellez moi" class="fa fa-phone-square">
+            <!--{{ site.author.tel }}-->
+          </a>
+        </li>
+        {% endif %}
+        <li>
+          <a href="/cv" title="Curriculm Vitae" class="fa fa-file-text"></a>
+        </li>
+      </ul>
+    </div>
+  </div> <!--/ .section fullpage.js -->
+
+  <!-- + ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ +
+       | POSTS tagged 'note' |
+       + ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ + -->
+  {% for post in site.posts %}
+    {% if post.tags contains 'note' %}
+      <div class="section">
+          <!-- NOTE #{{ forloop.index }} -->
+          <article class="note">
+            <h1>{{ post.title }}</h1>
+            {{ post.content | markdownify }}
+            <small class="note-meta">
+              {{ post.date | date_to_string }}
+              &ndash;
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </small>
+          </article>
+      </div> <!--/ .section fullpage.js : NOTE #{{ forloop.index }} -->
+    {% endif %}
+  {% endfor %}
+
+  {% if jekyll.environment == "development" %}
+    <div class="section debug-pages-list">
+      <div class="slide">
+        {% include debug-pages.html %}
+      </div>
+      <div class="slide">
+        Hello world !
+      </div>
+      <div class="slide">
+        Bye...
+      </div>
+    </div> <!--/ .section fullpage.js -->
+  {% endif %}
+</div> <!--/ #fullpage -->
+
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery.fullpage.min.js"></script>
+
+<!-- https://github.com/alvarotrigo/fullPage.js#initialization -->
+<script>
+
+  // $(document).ready(function() {
+  // });
+  //
+  // ^ TRYIN' DOMContentLoaded event : did not solve rendering artifacts at page
+  //   load. Also tried wrapping w/ requestAnimationFrame(): no change :/
+  //
+  document.addEventListener("DOMContentLoaded", function(event) {
+    window.requestAnimationFrame(function() {
+      $('#fullpage').fullpage({
+        // sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+        anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+        // menu: '#menu',
+        scrollingSpeed: 1000,
+        navigation: true,
+        navigationPosition: 'right',
+        navigationTooltips: ['First', 'Second', 'Third'],
+        responsiveWidth: 1100,
+        verticalCentered: true,
+      });
+    });
+  });
+</script>
