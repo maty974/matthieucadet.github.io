@@ -1,0 +1,70 @@
+{% comment %}
+
+    QUICK AND DIRTY TABLE WITH PAGES LIST (DEBUG)
+
+{% endcomment %}
+
+{% if jekyll.environment == "development" %}
+<section class="pages debug">
+  <div class="center">
+    <tt>site.url : {{ site.url }}</tt> &mdash;
+    <a href="http://matthieucadet.info">go to <b>matthieucadet.info</b></a>
+  </div>
+  {% assign pages_list = site.pages | sort:"date" | reverse %}
+    <table class="pages-list">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Page</th>
+          <th>layout</th>
+          <th>&mdash;</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for node in pages_list %}
+        {% unless node.layout == 'default' or node.layout == null %}
+          <tr>
+            <th>
+              {{ forloop.index }}
+            </th>
+            <td class="page-title">
+              <a href="{{ node.url }}"
+                 title="{{ node.url }}">
+                {% if node.title != null %}
+                  {{ node.title }}
+                {% else %}
+                  <tt>{{ node.url }}</tt>
+                {% endif %}
+              </a>
+              <tt>{{ note.url }}</tt>
+            </td>
+            <td>
+              <tt>{{ node.layout }}</tt>
+            </td>
+            <td>
+              {% if node.published == false %}
+                <tt> <b style="color: black;">[unpublished]</b> </tt>
+              {% else %}
+                <tt> <b style="color: darkgreen;">[published]</b> </tt>
+              {% endif %}
+
+              {% if node.title == null %}
+                <tt> <b style="color: darkred;">[untitled]</b> </tt>
+              {% endif %}
+
+              {% if node.tags contains 'draft' %}
+                <tt> <b style="color: darksalmon;">[draft]</b></tt>
+              {% endif %}
+
+              {% if node.tags contains 'dark' %}
+                <tt> <b style="color: #999; background-color: #222;">[dark]</b></tt>
+              {% endif %}
+            </td>
+          </tr>
+        {% endunless %}
+      {% endfor %}
+      </tbody>
+    </table>
+</section>
+{% endif %}
+

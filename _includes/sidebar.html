@@ -31,6 +31,14 @@
         {% endif %}
       {% endif %}
     {% endfor %}
+
+    {% comment %} LINK TO DEBUG PAGE {% endcomment %}
+    {% if jekyll.environment == "development" %}
+      <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}"
+         href="/debug+me/"
+         style="background-color: #754;">
+        <tt>/debug+me/</tt></a>
+    {% endif %}
   </nav>
 
   <div class="sidebar-item">
