@@ -51,29 +51,38 @@
         $(document).ready(function() {
           $(".twentytwenty-container").twentytwenty({
             no_overlay: false
-        });
-        });
-        $(document).ready(function() {
-            $('.single-item').slick({
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              arrows: false,
-              fade: true,
-              asNavFor: '.items-nav',
-              draggable: false,
-              swipe: false,
-              speed: 30
-            });
-            $('.items-nav').slick({
-              lazyLoad: 'ondemand',
-              arrows: true,
-              slidesToShow: 3,
-              slidesToScroll: 1,
-              asNavFor: '.single-item',
-              dots: false,
-              centerMode: true,
-              focusOnSelect: true
-            });
+          });
+
+          $('.single-item').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.items-nav',
+            draggable: false,
+            swipe: false,
+            speed: 30
+          });
+
+          $('.items-nav').slick({
+            lazyLoad: 'ondemand',
+            arrows: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.single-item',
+            dots: false,
+            centerMode: true,
+            focusOnSelect: true
+          });
+
+          // On before slide change
+          $('.single-item').on('afterChange', function(event, slick, currentSlide, nextSlide){
+            console.log("Slick changed slide: " + currentSlide +' -> '+ nextSlide);
+            // console.log(event);
+            // console.log(slick);
+            // "force redraw/reposition?"
+            // slick.setPosition();
+          });
         });
     </script>
     {% endif %}
