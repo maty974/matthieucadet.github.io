@@ -41,14 +41,22 @@
       })(document);
     </script>
 
+    <!-- For page /compositing_work.html -->
     {% if page.gallery_compare %}
       <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
       <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+      <script type="text/javascript" src="//unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
       <script src="{{ "/assets/slick.min.js" | relative_url }}"></script>
       <script src="{{ "/assets/jquery.twentytwenty.js" | relative_url }}"></script>
       <script src="{{ "/assets/jquery.event.move.js" | relative_url }}"></script>
+
       <script type="text/javascript">
-        $(document).ready(function() {
+        /**
+         * Setup func. that does 2 things: setup TwentyTwenty on stuff that have
+         * have class 'twentytwenty-container', then initialize Slick which will
+         * wrap the whole bunch.
+         */
+        function PleaseSetupGalleryCompare() {
           $(".twentytwenty-container").twentytwenty({
             no_overlay: false
           });
@@ -76,14 +84,91 @@
           });
 
           // On before slide change
-          $('.single-item').on('afterChange', function(event, slick, currentSlide, nextSlide){
+          $('.single-item').on('beforeChange', function(event, slick, currentSlide, nextSlide){
             console.log("Slick changed slide: " + currentSlide +' -> '+ nextSlide);
-            // console.log(event);
-            // console.log(slick);
-            // "force redraw/reposition?"
+            console.log(currentSlide, nextSlide);
+            //console.log(event, slick);
+            // "force redraw/reposition?" (doesn't solve the bug).
             // slick.setPosition();
           });
-        });
+
+          console.info(">> PleaseSetupGalleryCompare(): done! <<");
+        }
+
+        // Wait for document ready (previous impl.):
+        if( false ) {
+          $(document).ready(function() {
+            PleaseSetupGalleryCompare();
+          });
+        }
+        //
+        // Or use imageLoader ( https://imagesloaded.desandro.com ),
+        // "waiting" for all images to have been loaded (or failed
+        // loading).
+        //
+        // (!!) imagesLoaded _does not_ actually solve the problem (!!)
+        // (!!) But it happens that somehow Chrome gets mad at us and issues
+        // (!!) some sort of “violation” (see js console) :
+        // (!!)
+        // (!!)   "Forced reflow while executing JavaScript took 942ms"
+        // (!!)
+        // (!!) And this apparently forces a reflow of page (which ends up
+        // (!!) redrawing things) seems to make the bug... disappear (probably).
+        //
+        else {
+          // (!) Using class 'twenty-slick'
+          //     (instead of 'container' which is too generic).
+          $('.twenty-slick').imagesLoaded({ /* options */ })
+            // imageLoaded 'always' event:
+            //   “Triggered after all images have been
+            //    either loaded or confirmed broken.”
+            .always( function( instance ) {
+              console.info("imageLoaded 'always' handler: "
+                           + "invoking `PleaseSetupGalleryCompare()` now (!!).");
+              PleaseSetupGalleryCompare();
+              //console.log(instance);
+              console.info("imageLoaded processed "
+                + instance.progressedCount
+                + " images (or sthg like that).");
+            })
+            // imageLoaded 'fail' event:
+            //   “ Triggered after all images have been loaded
+            //     with at least one broken image. ”
+            .fail( function() {
+              console.warn("Some images have failed loading, says imageLoaded.");
+            })
+            // imageLoaded 'progress' event:
+            //   “Triggered after each image has been loaded
+            //    (or failed loading).”
+            .progress( function( instance, image ) {
+              // var result = image.isLoaded ? 'loaded' : 'broken';
+              // console.log( 'image is ' + result + ' for ' + image.img.src );
+              // ^ too much output.
+              //
+              // if (image.isLoaded == false) {
+              //   console.log("" + image.img.src
+              //                  + " : failed to load wtf!? "
+              //                  + "(says imageLoaded, 'progress' event handler).");
+              // }
+              // ^ This won't work, trying to show the src of images
+              //   that have failed: `image.img.src` is always empty -_-
+              //
+            })
+            // imageLoaded 'done' event:
+            //   “Triggered after all images have successfully loaded
+            //    __without__ any broken images.”
+            .done( function( instance ) {
+              console.info("imageLoaded 'done' event (does this ever happens?!)");
+              //
+              // console.info("~~> invoking PleaseSetupGalleryCompare().");
+              // PleaseSetupGalleryCompare();
+              //
+              // ^ CAN'T do this here (but we should): imageLoader says
+              //   some images fail, and this event handler is never invoked.
+              //   --> Moved init. to the 'always' event handler.
+              //
+            });
+        }
     </script>
     {% endif %}
 
