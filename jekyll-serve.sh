@@ -17,14 +17,14 @@ ulimit -v $((1024*1024))
 #ulimit -a ; exit
 
 echo "### Jekyll clean ###"
-if ! jekyll clean ; then
+if ! bundle exec jekyll clean ; then
     echo "# ERROR: jekyll clean exited with non-zero status code $?"
     exit 127
 fi
 
 jekyll_serve_cmd=(
-  nice jekyll serve --host 0.0.0.0 --port "${listen_port}"
-    --trace --watch
+  nice bundle exec jekyll serve --host 0.0.0.0 --port "${listen_port}"
+    --trace --incremental --watch
     --drafts --unpublished --future
   )
 
@@ -48,4 +48,3 @@ echo
 echo "# Finished, jekyll serve command was :"
 echo "#   ${jekyll_serve_cmd[@]}"
 echo
-
