@@ -9,3 +9,60 @@
 
 // import bootstrap
 //@import "bootstrap";
+
+/* Variables */
+// $bg-wrap: #202020;
+// $site-tagline-font-color: #b0b0b0;
+// $bg-container-content: #303030;
+
+.wrap-fp {
+  margin: 0 10%;
+}
+
+.masthead-fixed {
+  width: 100%;
+  position: fixed;
+  top:0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  z-index: 9;
+}
+
+.sidebar {
+  z-index: 10;
+}
+
+.sidebar-toggle {
+  z-index: 10;
+}
+
+// DEBUG: pages list at top of index.html
+section.pages.debug {
+  background-color: white;
+  font-size: .75em;
+}
+section.pages.debug ul {
+  margin: 0;
+  padding: .5em;
+}
+
+
+/* UTILITY */
+.center { margin: 0 auto; text-align: center; }
+.fs-small   { font-size: .75em; }
+.fs-smaller { font-size: .66em; }
+.fs-x-small { font-size: .33em; }
+.pre { white-space: pre; }
+.pre-wrap { white-space: pre-wrap; }
+
+/* FABIC « phi » tables. */
+table.phi td.separator {
+  padding: 0;
+  height: .25em;
+  background-color: #999;
+}
+
+
+/* EOF css/main.scss */

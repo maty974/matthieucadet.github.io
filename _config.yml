@@ -3,12 +3,13 @@
 # Use of `relative_permalinks` ensures post links from the index work properly.
 permalink: pretty
 
-plugins:
-  - jekyll-assets
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-seo-tag
+# Moved to the Gemfile.
+#plugins:
+#  - jekyll-assets
+#  - jekyll-paginate
+#  - jekyll-sitemap
+#  - jekyll-gist
+#  - jekyll-seo-tag
 
 sass:
     sass_dir: _sass
