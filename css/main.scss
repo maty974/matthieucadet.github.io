@@ -50,12 +50,13 @@ section.pages.debug ul {
 
 
 /* UTILITY */
-.center { margin: 0 auto; text-align: center; }
+.center, .centered { margin: 0 auto; text-align: center; }
 .fs-small   { font-size: .75em; }
 .fs-smaller { font-size: .66em; }
 .fs-x-small { font-size: .33em; }
 .pre { white-space: pre; }
 .pre-wrap { white-space: pre-wrap; }
+.zero-margins { margin: 0; }
 
 /* FABIC « phi » tables. */
 table.phi td.separator {
