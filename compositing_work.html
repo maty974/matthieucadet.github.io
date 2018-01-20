@@ -6,24 +6,34 @@ gallery_compare: true
 permalink: /work/compositing/
 ---
 
+{% comment %}
+  See _layouts/default.html for the JS code.
+  {F} FIXME: Added style for min. width/height so that the
+             twentytwenty-container div do not appear "empty" with 1-pixel height
+             when some image fail to have loaded.
+             For bug:
+              https://github.com/maty974/maty974.github.io/issues/3
+             as per:
+              https://github.com/zurb/twentytwenty/issues/31
+{% endcomment %}
+
 <div class="row" style="margin-top: 2em;">
-    <div class="container">
+    <div class="container twenty-slick">
       <div class="single-item">
         {% for file in site.data.compositing_work.compare_files %}
-            <div class="twentytwenty-container">
+          <div class="twentytwenty-container" style="min-width: 800; min-height: 450;">
                 <img src="/static/compositing_work/slider-sized/{{ file }}_int_precomp_lgt_l.jpg"/>
                 <img src="/static/compositing_work/slider-sized/{{ file }}_int_final_l.jpg"/>
             </div>
         {% endfor %}
       </div>
-      <p></p>
-      <div class="items-nav lazy">
+      <div class="items-nav lazy" style="margin-top: 1.5em;">
         {% for file in site.data.compositing_work.compare_files %}
             <div>
                 <img data-lazy="/static/compositing_work/thumbnails-nav/{{ file }}_int_final_l.jpg"/>
             </div>
         {% endfor %}
       </div>
-    </div>
-</div>
+    </div> <!--/ .container -->
+</div> <!--/ .row -->
 
