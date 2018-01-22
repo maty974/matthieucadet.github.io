@@ -5,26 +5,6 @@
    Maty/974 CSS
  */
 
-@-webkit-keyframes target-fade {
-  0% { background-color: white; }
-  100% { background-color: #252726; }
-}
-
-@-moz-keyframes target-fade {
-  0% { background-color: white; }
-  100% { background-color: #252726; }
-}
-
-.body-black {
-    background: #252726;
-    -webkit-animation: target-fade 3s 1;
-    -moz-animation: target-fade 3s 1;
-}
-
-.body-white {
-    background: white;
-}
-
 .run-974 {
   color: inherit;
   font-size: small;
@@ -133,12 +113,4 @@ ul.sidebar-sc-url > li {
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.page-title {
-{% if page.gallery_compare %}
-  color: #cccaca;
-{% else %}
-  color: #303030;
-{% endif %}
 }
