@@ -20,6 +20,13 @@
   font-size: 40px;
 }
 
+.fade-to-black .slick-prev:before,
+.fade-to-black .slick-next:before
+{
+  color: #fbfafa;
+  font-size: 40px;
+}
+
 .slick-prev
 {
     left: -45px;

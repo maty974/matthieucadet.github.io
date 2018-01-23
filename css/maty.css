@@ -5,6 +5,28 @@
    Maty/974 CSS
  */
 
+@-webkit-keyframes target-fade {
+  0% { background-color: white; }
+  100% { background-color: #252726; }
+}
+
+@-moz-keyframes target-fade {
+  0% { background-color: white; }
+  100% { background-color: #252726; }
+}
+
+.fade-to-black {
+    background: #252726;
+    -webkit-animation: target-fade 3s 1;
+    -moz-animation: target-fade 3s 1;
+}
+
+/* See _layouts/default.html and Liquid var. `fade_to_black: true` */
+.page-title { color: #303030; }
+.fade-to-black .page-title { color: #cccaca; }
+
+/* .body-white { background: white; } */
+
 .run-974 {
   color: inherit;
   font-size: small;
