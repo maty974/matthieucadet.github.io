@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-us">
   {% include head.html %}
-  <body{% if page.fade_to_black %} class="fade-to-black"{% endif %}>
+  <!-- body{% if page.fade_to_black %} class="fade-to-black"{% endif %}
+       ^ Replaced by JS func. FadePageToBlack() which adds the `fade-to-black`
+         class after a timeout has elapsed so as to prevent rendering flicker. -->
+  <body>
     {% include sidebar.html %}
 
     <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
@@ -50,7 +53,7 @@
       <script src="{{ "/assets/jquery.twentytwenty.js" | relative_url }}"></script>
       <script src="{{ "/assets/jquery.event.move.js" | relative_url }}"></script>
 
-      <script type="text/javascript">
+      <script type="text/javascript"> <!-- Function decls -->
         /**
          * Setup func. that does 2 things: setup TwentyTwenty on stuff that have
          * have class 'twentytwenty-container', then initialize Slick which will
@@ -95,6 +98,44 @@
           console.info(">> PleaseSetupGalleryCompare(): done! <<");
         }
 
+        /** Fade page to black by adding CSS class 'fade-to-black'
+         * to `element` (default: body).  Argument `wantPageFadeToBlack` may be
+         * a number, in which case it is the number of milliseconds we should
+         * wait before acting.
+         *
+         * Usage:
+         *   - `FadePageToBlack(true); // add CSS class immediately.`
+         *   - `FadePageToBlack(800);  // delay by 800 msecs. `
+         *
+         * Written for /compositing_work.html page which is CPU-heavy
+         * and causes rendering flicker on F's old computer -_-
+         *
+         * @param {bool|number} wantPageFadeToBlack  true/false/number.
+         * @param {string}      element              Default: "body".
+         */
+        function FadePageToBlack(wantPageFadeToBlack, element) {
+          element = element || "body";
+          if (wantPageFadeToBlack == false)
+            return;
+          // Prevent duplicate invocations.
+          else if (jQuery(element).hasClass("fade-to-black")) {
+            console.warn("FadePageToBlack(): element already has the 'fade-to-black' class");
+            return;
+          }
+          else {
+            console.info("Adding .fade-to-black to element: " + element
+                         + " (delayed by " + delay_millisecs + " milliseconds).");
+            var delay_millisecs = +wantPageFadeToBlack ;
+            jQuery().ready(function(event) {
+              window.setTimeout(function(elt) {
+                jQuery( elt ).addClass("fade-to-black");
+              }, delay_millisecs, element);
+            });
+          }
+        }
+      </script> <!--/ ^ functions -->
+
+    <script> <!-- Twenty/Slick gallery setup code -->
         // Wait for document ready (previous impl.):
         if( false ) {
           $(document).ready(function() {
@@ -126,7 +167,7 @@
               console.info("imageLoaded 'always' handler: "
                            + "invoking `PleaseSetupGalleryCompare()` now (!!).");
               PleaseSetupGalleryCompare();
-              //console.log(instance);
+              FadePageToBlack({{ page.fade_to_black | to_integer }});
               console.info("imageLoaded processed "
                 + instance.progressedCount
                 + " images (or sthg like that).");
@@ -169,7 +210,7 @@
               //
             });
         }
-    </script>
+    </script> <!-- Twenty/Slick gallery setup code -->
     {% endif %}
 
     {% include disqus.html %}
