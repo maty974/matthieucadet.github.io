@@ -10,7 +10,11 @@
     <tt>site.url : {{ site.url }}</tt> &mdash;
     <a href="http://matthieucadet.info">go to <b>matthieucadet.info</b></a>
   </div>
-  {% assign pages_list = site.pages | sort:"date" | reverse %}
+  {% assign pages_list = site.pages %}
+  {% assign posts_list = site.posts | sort:"date" | reverse %}
+  {% for item in posts_list %}
+    {% assign pages_list = pages_list | push: item %}
+  {% endfor %}
     <table class="pages-list">
       <thead>
         <tr>
@@ -22,7 +26,7 @@
       </thead>
       <tbody>
       {% for node in pages_list %}
-        {% unless node.layout == 'default' or node.layout == null %}
+        {% if node.layout != null %}
           <tr>
             <th>
               {{ forloop.index }}
@@ -61,7 +65,7 @@
               {% endif %}
             </td>
           </tr>
-        {% endunless %}
+        {% endif %}
       {% endfor %}
       </tbody>
     </table>
