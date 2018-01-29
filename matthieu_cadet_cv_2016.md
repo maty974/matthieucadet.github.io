@@ -43,7 +43,7 @@ Connaissances Techniques
 - Python
 - PySide
 - HTML
-- CVS / Subversion / Git
+- Git | Subversion
 - Qt
 
 
