@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-us">
   {% include head.html %}
-  <body {% if page.gallery_compare %} class="body-black" {% else %} class="body-white" {% endif %}>
+  <body>
     {% include sidebar.html %}
 
     <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
          content to avoid any CSS collisions with our real content. -->
-    {% if true %}
+    {% if page.tags contains "no-header" %}
+      <!-- Top of page header: disabled. -->
+    {% else %}
       <div class="masthead masthead-fixed">
         <div class="container">
           <h3 class="masthead-title">
@@ -17,7 +19,7 @@
       </div>
     {% endif %}
 
-    <div class="wrap-fp">
+    <div class="wrap-fp{% if page.tags contains "wide" %} wide{% endif %}">
       {{ content }}
     </div>
 
@@ -40,43 +42,6 @@
         }, false);
       })(document);
     </script>
-
-    {% if page.gallery_compare %}
-      <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-      <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-      <script src="{{ "/assets/slick.min.js" | relative_url }}"></script>
-      <script src="{{ "/assets/jquery.twentytwenty.js" | relative_url }}"></script>
-      <script src="{{ "/assets/jquery.event.move.js" | relative_url }}"></script>
-      <script type="text/javascript">
-        $(document).ready(function() {
-          $(".twentytwenty-container").twentytwenty({
-            no_overlay: false
-        });
-        });
-        $(document).ready(function() {
-            $('.single-item').slick({
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              arrows: false,
-              fade: true,
-              asNavFor: '.items-nav',
-              draggable: false,
-              swipe: false,
-              speed: 30
-            });
-            $('.items-nav').slick({
-              lazyLoad: 'ondemand',
-              arrows: true,
-              slidesToShow: 3,
-              slidesToScroll: 1,
-              asNavFor: '.single-item',
-              dots: false,
-              centerMode: true,
-              focusOnSelect: true
-            });
-        });
-    </script>
-    {% endif %}
 
     {% include disqus.html %}
 
