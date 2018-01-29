@@ -47,7 +47,7 @@ Connaissances Techniques
 - Qt
 
 
-Éxperience Professionelle
+Expérience Professionnelle
 -------------------------
 
 ### Senior Compositing Artist TD & Pipeline Developer
@@ -57,9 +57,9 @@ Connaissances Techniques
      src="/static/movie_posters/queen-corgis-poster.jpg">
 
 *The Queen’s Corgi* / long metrage d'animation 3D
-- Compositing 3D & Stereo
-- Developement du pipeline Nuke & Davinci Resolve
-- Developement d'outils interne de suivi de production
+- Compositing 3D & Stéréo
+- Développement du pipeline Nuke & Davinci Resolve
+- Développement d'outils interne de suivi de production
 
 <div style="clear: both;"></div>
 
@@ -72,9 +72,9 @@ Connaissances Techniques
 </a>
 
 *The Son of Bigfoot* / long metrage d'animation 3D
-- Compositing 3D & Stereo
-- Developement du pipeline Nuke & Davinci Resolve
-- Developement d'outils interne de suivi de production
+- Compositing 3D & Stéréo
+- Développement du pipeline Nuke & Davinci Resolve
+- Développement d'outils interne de suivi de production
 
 <div style="clear: both;"></div>
 
@@ -87,8 +87,8 @@ Connaissances Techniques
 </a>
 
 *Robinson Crusoe* / long metrage d'animation 3D
-- Compositing 3D & Stereo
-- Developement d'outils interne
+- Compositing 3D & Stéréo
+- Développement d'outils interne
 
 <div style="clear: both;"></div>
 
@@ -102,8 +102,8 @@ Connaissances Techniques
 </a>
 
 *The House of Magic* / long metrage d'animation 3D
-- Compositing 3D & Stereo
-- Developement d'outils interne
+- Compositing 3D & Stéréo
+- Développement d'outils interne
 
 <div style="clear: both;"></div>
 
@@ -117,8 +117,8 @@ Connaissances Techniques
 </a>
 
 *A Turtle's Tale 2 ( Sammy 2 )* / long metrage d'animation 3D
-- Compositing 3D & Stereo
-- Developement d'outils interne
+- Compositing 3D & Stéréo
+- Développement d'outils interne
 
 <div style="clear: both;"></div>
 
@@ -131,9 +131,9 @@ Connaissances Techniques
      src="/static/movie_posters/the-little-prince-poster.jpg">
 </a>
 
-*The Little Prince ( Le Petit Prince )* / Attraction 3D Stereo
-- Compositing 3D & Stereo
-- Developement d'outils interne
+*The Little Prince ( Le Petit Prince )* / Attraction 3D Stéréo
+- Compositing 3D & Stéréo
+- Développement d'outils interne
 
 <div style="clear: both;"></div>
 
@@ -146,9 +146,9 @@ Connaissances Techniques
      src="/static/movie_posters/pirates-story-poster.jpg">
 </a>
 
-*Pirates Stroy 4D* / Attraction 3D Stereo
-- Compositing 3D & Stereo
-- Developement d'outils interne
+*Pirates Story 4D* / Attraction 3D Stéréo
+- Compositing 3D & Stéréo
+- Développement d'outils interne
 
 <div style="clear: both;"></div>
 
@@ -162,8 +162,8 @@ Connaissances Techniques
 </a>
 
 *A Turtle's Tale ( Le Voyage Extraordinaire de Samy )* / long metrage d'animation 3D
-- Compositing 3D & Stereo
-- Developement d'outils interne
+- Compositing 3D & Stéréo
+- Développement d'outils interne
 
 <div style="clear: both;"></div>
 
@@ -177,8 +177,8 @@ Connaissances Techniques
 </a>
 
 *Fly me to the moon* / long metrage d'animation 3D
-- Compositing 3D & Stereo
-- Developement d'outils interne
+- Compositing 3D & Stéréo
+- Développement d'outils interne
 
 <div style="clear: both;"></div>
 
@@ -186,14 +186,14 @@ Connaissances Techniques
 Formation
 ---------
 
-__2002&ndash;2005__ | Diplomé du Cycle Professionnel Cinéma d'animation 3D et Effets Spéciaux | École Supérieure des Métiers Artistiques (<a href="http://www.esma-artistique.com/" target="_blank">ESMA</a>)<br><small>Montpellier, France</small>
-__2001&ndash;2004__ | Bac STI Arts Appliques | Lycee Ambroise Vollard<br><small>Saint-Pierre, Île de La Réunion</small>
+__2002&ndash;2005__ | Diplômé du Cycle Professionnel Cinéma d'animation 3D et Effets Spéciaux | École Supérieure des Métiers Artistiques (<a href="http://www.esma-artistique.com/" target="_blank">ESMA</a>)<br><small>Montpellier, France</small>
+__2001&ndash;2004__ | Bac STI Arts Appliques | Lycée Ambroise Vollard<br><small>Saint-Pierre, Île de La Réunion</small>
 
 
 
 Loisirs
 -------
 
-- Photographie numerique & argentique
-- Travaux de menuiserie & ebenisterie
+- Photographie numérique & argentique
+- Travaux de menuiserie & ébénisterie
 - Électronique
