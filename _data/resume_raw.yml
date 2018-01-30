@@ -1,0 +1,35 @@
+author_data:
+  name: Matthieu Cadet
+  birthdate: 7 Fevrier 1984
+  birthplace: l'Île de La Réunion en 1984
+  nationality: Français
+  civil_status : Marié
+  language: Français & Anglais
+  email: matthieu.cadet@gmail.com
+  tel: +32 472 623 242
+  website: matthieucadet.info
+
+head_title: Senior Compositing Artist & Technical Director &mdash; 10 ans d'expérience.
+
+head_description: "En poste à nWaveDigital
+(2006 &ndash; 2018), au département “Compositing”
+où ont lieu une variété de post-traitements sur les jeux d'images issues
+du “Lighting”. Rôle clé dans la mise en oeuvre des processus de traitement par
+la réalisation d'outils (en Python principalement) ....."
+
+softwares:
+  label: Logiciels
+  list:
+    - Nuke & Nuke Studio 11
+    - Davinci Resolve
+    - Maya
+    - Adobe Suite ( Premiere, After Effect, &hellip; )
+
+programming_skills:
+  label: Programmation
+  list:
+    - Python
+    - PySide
+    - HTML
+    - Git / Subversion
+    - Qt

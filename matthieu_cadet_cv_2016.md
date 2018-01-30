@@ -4,47 +4,35 @@ title: Curriculum Vitae
 permalink: /cv/
 ---
 
-Matthieu Cadet
+{{ site.data.resume_raw.author_data.name }}
 ==============
 <img title=""
      class="float-this film-thumb"
      src="/static/matthieu-cadet-portrait.png">
-_Senior Compositing Artist & Technical Director &mdash; 10 ans d'expérience._
+_{{ site.data.resume_raw.head_title }}_
 
-En poste à {{ site.author.current_studio }}
-(2006 &ndash; 2017), au département “Compositing”
-où ont lieu une variété de post-traitements sur les jeux d'images issues
-du “Lighting”. Rôle clé dans la mise en oeuvre des processus de traitement par
-la réalisation d'outils (en Python principalement) .....
+{{ site.data.resume_raw.head_description }}
 
-
-* __Né à :__ l'Île de La Réunion en 1984
-* __Nationalité :__ Français
-* __État civil :__ Marié
-* __Langues :__ Français & Anglais
-* __e-mail :__ [{{ site.author.email }}](mailto:{{ site.author.email }})
-* __Téléphone :__ [{{ site.author.tel }}](tel:{{ site.author.tel }})
-* __Site web :__ [{{ site.author.url }}]({{ site.url }})
-
-
+* __Né à :__ {{ site.data.resume_raw.author_data.birthplace }}
+* __Nationalité :__ {{ site.data.resume_raw.author_data.nationality }}
+* __État civil :__ {{ site.data.resume_raw.author_data.civil_status }}
+* __Langues :__ {{ site.data.resume_raw.author_data.language }}
+* __e-mail :__ [{{ site.data.resume_raw.author_data.email }}](mailto:{{ site.data.resume_raw.author_data.email }})
+* __Téléphone :__ [{{ site.data.resume_raw.author_data.tel }}](tel:{{ site.data.resume_raw.author_data.tel }})
+* __Site web :__ [{{ site.data.resume_raw.author_data.website }}]({{ site.data.resume_raw.author_data.website }})
 
 Connaissances Techniques
 ------------------------
 
-### Logiciels :
+### {{ site.data.resume_raw.softwares.label }} :
+{% for data_value in site.data.resume_raw.softwares.list %}
+- {{ data_value -}}
+{% endfor %}
 
-- Nuke & Nuke Studio 11
-- Davinci Resolve
-- Maya
-- Adobe Suite ( Premiere, After Effect, &hellip; )
-
-### Programmation :
-
-- Python
-- PySide
-- HTML
-- Git | Subversion
-- Qt
+### {{ site.data.resume_raw.programming_skills.label }} :
+{% for data_value in site.data.resume_raw.programming_skills.list %}
+- {{ data_value -}}
+{% endfor %}
 
 
 Expérience Professionnelle
