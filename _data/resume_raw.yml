@@ -33,3 +33,68 @@ programming_skills:
     - HTML
     - Git / Subversion
     - Qt
+
+hobbies:
+  label: Loisirs
+  list:
+    - Photographie numérique & argentique
+    - Travaux de menuiserie & ébénisterie
+    - Électronique
+
+education:
+  label: Formations
+  list:
+    - code: esma
+      school_name: École Supérieure des Métiers Artistiques
+      school_shortname: ESMA
+      school_url: http://www.esma-artistique.com
+      school_place: Montpellier, France
+      school_logo: null
+      period: 2002&ndash;2005
+      degree: Diplômé du Cycle Professionnel Cinéma d'animation 3D et Effets Spéciaux
+    
+    - code: vollard
+      school_name: Lycée Ambroise Vollard
+      school_shortname: null
+      school_url: null
+      school_place: Saint-Pierre, Île de La Réunion
+      school_logo: null
+      period: 2001&ndash;2004
+      degree: Bac STI Arts Appliques
+
+work_experiences:
+  label: Expérience Professionnelle
+  list:
+    - code: the_queens_corgi
+      publish: true
+      subject_title: The Queen’s Corgi
+      subject_thumbnail: /static/movie_posters/queen-corgis-poster.jpg
+      subject_type: long metrage d'animation 3D
+      subject_url: null
+      period_start: 2017-01-01
+      period_end: 2018-12-01
+      job_company: nWave Digital
+      job_company_url: http://www.nwave.com
+      job_title: Senior Compositing Artist TD & Pipeline Developer
+      skills: ['Python','Compositing','R&D']
+      tasks:
+        - Compositing 3D & Stéréo
+        - Développement du pipeline Nuke & Davinci Resolve
+        - Développement d'outils interne de suivi de production
+
+    - code: TEST
+      publish: false
+      subject_title: Travel around Jupiter
+      subject_thumbnail: https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/US-NASA-BiotechnologyFacility-Logo.svg/600px-US-NASA-BiotechnologyFacility-Logo.svg.png
+      subject_type: Risky
+      subject_url: null
+      period_start: 2049-12-01
+      period_end: 2060-12-01
+      job_company: ISS International
+      job_company_url: http://www.nasa.com
+      job_title: Senior Astronaut
+      skills: ['diner','painting','jogging']
+      tasks:
+        - Clean asteroids
+        - Dig blackhole
+        - Become a star in the midlle of the stars

@@ -9,9 +9,9 @@ group :jekyll_plugins do
 	gem 'jekyll-seo-tag'
     # Github Gists
 	gem 'jekyll-gist'
+	gem 'jekyll-feed'
      # Source code highlighting.
     #gem 'github-linguist'
-	#gem 'jekyll-feed'
 	#gem 'jekyll-pdf'
   # ^ Crashes.
 end

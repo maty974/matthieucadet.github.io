@@ -23,7 +23,6 @@ _{{ site.data.resume_raw.head_title }}_
 
 Connaissances Techniques
 ------------------------
-
 ### {{ site.data.resume_raw.softwares.label }} :
 {% for data_value in site.data.resume_raw.softwares.list %}
 - {{ data_value -}}
@@ -34,21 +33,24 @@ Connaissances Techniques
 - {{ data_value -}}
 {% endfor %}
 
-
-Expérience Professionnelle
+{{ site.data.resume_raw.work_experiences.label }}
 -------------------------
+<!-- TODO: add french month name https://stackoverflow.com/a/38946698 -->
+{% assign work_experiences = site.data.resume_raw.work_experiences.list | sort: 'period_end' | reverse %}
+{% for data_value in work_experiences %}
+{% if data_value.publish or jekyll.environment == "development" %}
+### {{ data_value.job_title }}
+<span class="cv-when-where">{{ data_value.period_start | date: "%Y" }} &ndash; {{ data_value.period_end | date: "%Y" }} | <a href="{{ data_value.job_company_url }}" target="_blank">{{ data_value.job_company }}</a></span>
+<img title="{{ data_value.subject_title }}"
+    class="float-this film-thumb"
+    src="{{ data_value.subject_thumbnail }}">
 
-### Senior Compositing Artist TD & Pipeline Developer
-<span class="cv-when-where">2017 &ndash; aujourd'hui | <a href="http://www.nwave.com/" target="_blank">nWave Digital</a></span>
-<img title="The Queen’s Corgi"
-     class="float-this film-thumb"
-     src="/static/movie_posters/queen-corgis-poster.jpg">
-
-*The Queen’s Corgi* / long metrage d'animation 3D
-- Compositing 3D & Stéréo
-- Développement du pipeline Nuke & Davinci Resolve
-- Développement d'outils interne de suivi de production
-
+*{{ data_value.subject_title }}* / {{ data_value.subject_type }}
+{% for task_value in data_value.tasks %}
+- {{ task_value -}}
+{% endfor %}
+{% endif %}
+{% endfor %}
 <div style="clear: both;"></div>
 
 ### Senior Compositing Artist TD & Pipeline Developer
@@ -171,17 +173,14 @@ Expérience Professionnelle
 <div style="clear: both;"></div>
 
 
-Formation
+{{ site.data.resume_raw.education.label }}
 ---------
+{% for data_value in site.data.resume_raw.education.list %}
+__{{ data_value.period }}__ | {{ data_value.degree }} | {{ data_value.school_name }} {% if data_value.school_url %}(<a href="{{ data_value.school_url }}" target="_blank">{{ data_value.school_shortname }}</a>){% endif %}<br><small>{{ data_value.school_place }}</small>
+{%- endfor %}
 
-__2002&ndash;2005__ | Diplômé du Cycle Professionnel Cinéma d'animation 3D et Effets Spéciaux | École Supérieure des Métiers Artistiques (<a href="http://www.esma-artistique.com/" target="_blank">ESMA</a>)<br><small>Montpellier, France</small>
-__2001&ndash;2004__ | Bac STI Arts Appliques | Lycée Ambroise Vollard<br><small>Saint-Pierre, Île de La Réunion</small>
-
-
-
-Loisirs
+{{ site.data.resume_raw.hobbies.label }}
 -------
-
-- Photographie numérique & argentique
-- Travaux de menuiserie & ébénisterie
-- Électronique
+{% for data_value in site.data.resume_raw.hobbies.list %}
+- {{ data_value -}}
+{% endfor %}
