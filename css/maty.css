@@ -136,3 +136,16 @@ ul.sidebar-sc-url > li {
   width: 100%;
   height: 100%;
 }
+
+/* Float aligned elements */
+.float {
+  background: lightgreen;
+  border: solid green 1px;
+  float: left;
+}
+    
+/* These elements are intended to be half the width of their 
+parents */
+.half {
+  width: 50%;
+}

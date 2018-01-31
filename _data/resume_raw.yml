@@ -82,6 +82,135 @@ work_experiences:
         - Développement du pipeline Nuke & Davinci Resolve
         - Développement d'outils interne de suivi de production
 
+    - code: son_of_bigfoot
+      publish: true
+      subject_title: The Son of Bigfoot
+      subject_thumbnail: /static/movie_posters/son-of-bigfoot-poster.jpg
+      subject_type: long metrage d'animation 3D
+      subject_url: "https://youtu.be/9BFweFCDpsM"
+      period_start: 2015-11-01
+      period_end: 2016-07-30
+      job_company: nWave Digital
+      job_company_url: http://www.nwave.com
+      job_title: Senior Compositing Artist TD & Pipeline Developer
+      skills: ['Python','Compositing','R&D']
+      tasks:
+        - Compositing 3D & Stéréo
+        - Développement du pipeline Nuke & Davinci Resolve
+        - Développement d'outils interne de suivi de production
+
+    - code: robinson_crusoe
+      publish: true
+      subject_title: Robinson Crusoe
+      subject_thumbnail: /static/movie_posters/robinson-crusoe-poster.jpg
+      subject_type: long metrage d'animation 3D
+      subject_url: "https://vimeo.com/133013937"
+      period_start: 2013-11-01
+      period_end: 2015-11-30
+      job_company: nWave Digital
+      job_company_url: http://www.nwave.com
+      job_title: Senior Compositing Artist TD & Pipeline Developer
+      skills: ['Python','Compositing','R&D']
+      tasks:
+        - Compositing 3D & Stéréo
+        - Développement d'outils interne
+
+    - code: house_of_magic
+      publish: true
+      subject_title: The House of Magic
+      subject_thumbnail: /static/movie_posters/house-of-magic-poster.jpg
+      subject_type: long metrage d'animation 3D
+      subject_url: "https://vimeo.com/77062169"
+      period_start: 2012-05-01
+      period_end: 2013-11-30
+      job_company: nWave Digital
+      job_company_url: http://www.nwave.com
+      job_title: Senior Compositing Artist TD & Pipeline Developer
+      skills: ['Python','Compositing','R&D']
+      tasks:
+        - Compositing 3D & Stéréo
+        - Développement d'outils interne
+
+    - code: sammy2
+      publish: true
+      subject_title: A Turtle's Tale 2 ( Sammy 2 )
+      subject_thumbnail: /static/movie_posters/sammy2-poster.jpg
+      subject_type: long metrage d'animation 3D
+      subject_url: "https://youtu.be/pv8cs0RQJrI"
+      period_start: 2010-10-01
+      period_end: 2012-05-30
+      job_company: nWave Digital
+      job_company_url: http://www.nwave.com
+      job_title: Senior Compositing Artist TD & Pipeline Developer
+      skills: ['Python','Compositing','R&D']
+      tasks:
+        - Compositing 3D & Stéréo
+        - Développement d'outils interne
+
+    - code: the_little_prince
+      publish: true
+      subject_title: The Little Prince ( Le Petit Prince )
+      subject_thumbnail: /static/movie_posters/the-little-prince-poster.jpg
+      subject_type: Attraction 3D Stéréo
+      subject_url: "https://youtu.be/35r3-y7BSts"
+      period_start: 2010-03-01
+      period_end: 2010-09-30
+      job_company: nWave Digital
+      job_company_url: http://www.nwave.com
+      job_title: Senior Compositing Artist TD & Pipeline Developer
+      skills: ['Python','Compositing','R&D']
+      tasks:
+        - Compositing 3D & Stéréo
+        - Développement d'outils interne
+
+    - code: pirates_story
+      publish: true
+      subject_title: Pirates Story 4D
+      subject_thumbnail: /static/movie_posters/pirates-story-poster.jpg
+      subject_type: Attraction 3D Stéréo
+      subject_url: "https://youtu.be/O9g0yu4Ms4A"
+      period_start: 2009-11-01
+      period_end: 2010-03-30
+      job_company: nWave Digital
+      job_company_url: http://www.nwave.com
+      job_title: Senior Compositing Artist TD & Pipeline Developer
+      skills: ['Python','Compositing','R&D']
+      tasks:
+        - Compositing 3D & Stéréo
+        - Développement d'outils interne
+
+    - code: sammy1
+      publish: true
+      subject_title: A Turtle's Tale ( Le Voyage Extraordinaire de Samy )
+      subject_thumbnail: /static/movie_posters/sammy1-poster.jpg
+      subject_type: long metrage d'animation 3D
+      subject_url: "https://vimeo.com/75391177"
+      period_start: 2008-01-01
+      period_end: 2009-11-30
+      job_company: nWave Digital
+      job_company_url: http://www.nwave.com
+      job_title: Senior Compositing Artist TD & Pipeline Developer
+      skills: ['Python','Compositing','R&D']
+      tasks:
+        - Compositing 3D & Stéréo
+        - Développement d'outils interne
+
+    - code: fly_me_to_the_moon
+      publish: true
+      subject_title: Fly Me To The Moon
+      subject_thumbnail: /static/movie_posters/fly-me-to-the-moon-poster.jpg
+      subject_type: long metrage d'animation 3D
+      subject_url: "https://youtu.be/a1smyXGnZao"
+      period_start: 2006-05-01
+      period_end: 2007-08-30
+      job_company: nWave Digital
+      job_company_url: http://www.nwave.com
+      job_title: Senior Compositing Artist TD & Pipeline Developer
+      skills: ['Python','Compositing','R&D']
+      tasks:
+        - Compositing 3D & Stéréo
+        - Développement d'outils interne
+
     - code: TEST
       publish: false
       subject_title: Travel around Jupiter
