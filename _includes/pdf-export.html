@@ -1,0 +1,14 @@
+{% comment %}
+  PDF rendering experimental Node.js+Phantom.js prototype @ js.fabic.net/_/pdf/{{ URL }}
+    * See #8: https://github.com/maty974/maty974.github.io/issues/8
+    * Included from `_includes/default.html`
+    * Positioning: `css/main.scss`
+{% endcomment %}
+
+<div class="pdf-export-widget">
+  {% assign url = page.url | absolute_url | uri_escape %}
+  {% assign filename  = site.author.name | append: " - " | append: page.title | uri_escape %}
+  <a href="http://js.fabic.net/_/pdf/{{ url }}?fn={{ filename }}"
+     class="fa fa-file-pdf-o"
+     title="Get page as PDF"></a>
+</div> <!--/ .pdf-export-widget -->

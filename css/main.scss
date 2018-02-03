@@ -64,5 +64,17 @@ table.phi td.separator {
   background-color: #999;
 }
 
+/* PDF export link at top-right corner of page.
+ * See _includes/pdf-export.html
+ * See issue #8 */
+.pdf-export-widget {
+  position: fixed;
+  right: .25rem;
+  top: .1rem;
+  font-size: .75em;
+  z-index: 10;
+  cursor: pointer;
+}
+
 
 /* EOF css/main.scss */
