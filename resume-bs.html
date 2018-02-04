@@ -177,17 +177,14 @@ permalink: /cv2/
 
               {% for video in W.tubes %}
                 {% if video.type == "youtube" %}
-                  <div class="video-embed video-embed-youtube">
-                    <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/{{ video.id }}"
-                            frameborder="0" gesture="media"
-                            allow="encrypted-media" allowfullscreen></iframe>
+                  <div class="video-embed video-embed-youtube"
+                       data-video-type="youtube"
+                       data-video-id="{{ video.id }}">
                   </div> <!--/ .video-embed /-->
                 {% elsif video.type == "vimeo" %}
-                  <div class="video-embed video-embed-youtube">
-                    <iframe src="https://player.vimeo.com/video/{{ video.id }}?byline=0&portrait=0"
-                            width="640" height="360" frameborder="0"
-                            webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                  <div class="video-embed video-embed-youtube"
+                       data-video-type="vimeo"
+                       data-video-id="{{ video.id }}">
                   </div> <!--/ .video-embed /-->
                 {% elsif video.url %}
                   <a href="{{ video.url }}">
@@ -320,10 +317,15 @@ permalink: /cv2/
         group: 'job-details',
         loop: true,
         fullscreen: false,
-        onResize: function(modal){
+        onOpening: function(modal) {
+          console.info("iziModal :: onOpening().");
+          let cntr = modal.$element;
+          SetupTubes( cntr );
+        },
+        onResize: function(modal) {
           // console.log(modal.modalHeight);
         },
-        afterRender: function(modal){
+        afterRender: function(modal) {
           // modal.open();
         },
         /*  transitionIn: false,
