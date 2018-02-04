@@ -127,9 +127,10 @@ permalink: /cv2/
     </div> <!--/ #hobbies /-->
 
 
+    {% if jekyll.environment == "development" %}
     <!--
           STUB "panel" thing from layoutit
-          TODO: remove when we're done.
+          TODO: remove when we're done learning more of Bootstrap.
                                              -->
     <div class="row" style="background-color: lightyellow">
       <div class="col-md-6">
@@ -163,6 +164,7 @@ permalink: /cv2/
         </div>
       </div>
     </div> <!--/ TEMP SAMPLE "panel" thing /-->
+    {% endif %}
 
 
     <!--
@@ -297,10 +299,22 @@ permalink: /cv2/
 <script src="//cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.event.move.min.js"></script>
 
 <script type="text/javascript">
+  /**
+   * JavaScript that :
+   *   - add the /css/resume-bs.css stylesheet
+   *   - sets up the modal windows upon click of the movie posters.
+   *     `> youtube/vimeo videos are set up on-demand (reduce page load time).
+   *     `> TwentyTwenty before-after compare images slider thing is also set up
+   *        on-demand.
+   *
+   * Now everything here is... complicated.
+   */
   jQuery(document).ready(function() {
     // Custom stylesheet is added with JS because Jekyll/Liquid does not provide
     // a way to modify <head> from inheriting pages.
     Utils.addStyleSheet("/css/resume-bs.css");
+
+    // TwentyTwenty CSS
     Utils.addStyleSheet("//cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/css/twentytwenty.min.css");
 
     /**
@@ -328,12 +342,12 @@ permalink: /cv2/
 
         div.append(img1, img2);
 
+        // Insert into the DOM first so that TwentyTwenty
+        // sets itself up correctely.
         cntr.append( div );
 
-        window.requestAnimationFrame(function() {
-          div.twentytwenty({
-            no_overlay: false
-          });
+        div.twentytwenty({
+          no_overlay: false
         });
 
         console.info(`   done.`);
@@ -346,6 +360,10 @@ permalink: /cv2/
      * Note: Tubes gets loaded on-demand when the modal window is opened.
      *       See event 'onOpening: ...' callback.
      *       See SetupTubes().
+     *
+     * Note: TwentyTwenty slider thing is also setup on-demand.
+     *       See event 'onOpened: ...' callback.
+     *       See SetupTwentyTwentyBeneath().
      *
      * @link http://izimodal.marcelodolce.com
      */
@@ -367,7 +385,7 @@ permalink: /cv2/
         // top: 50,
         // bottom: 50,
         // timeout: 5000,
-        title: "Welcome to ...",
+        //title: "Welcome to ...",
         // subtitle: "Simple, complete and lightweight modal plugin with jquery.",
         icon: 'icon-chat',
         // overlayColor: 'rgba(255, 255, 255, 0.4)',
@@ -406,15 +424,17 @@ permalink: /cv2/
             transitionOutOverlay: false */
       });
 
-      // Setup on-click event handler.
+      // Setup on-click event handler upon the movie posters.
       $(document).on('click', '.job-detail-modal-trigger', function (event) {
         // Prevent following links.
         event.preventDefault();
+
         let that = $(this);
         let jobCode = that.attr('data-job-code');
         let jobDetailsCntrId = "job-detail-modal-" + jobCode;
         let jobDetailsCntr = $(`#${jobDetailsCntrId}`);
-        console.log(this, jobCode, jobDetailsCntr);
+
+        //console.log(this, jobCode, jobDetailsCntr);
 
         jobDetailsCntr.iziModal('open' /*, { zindex: 99999 } */);
       });
