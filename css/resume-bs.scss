@@ -11,8 +11,8 @@
 
 #aside {
   border-left: 1px solid #ddd;
-  padding: 0 .25em;
-  background-color: #fdfdfd;
+  padding: .25em .5em;
+  background-color: #fefefe;
 }
 
 #author-photo {
@@ -55,6 +55,21 @@
 .job .subject-thumbnail img {
   width: 100%;
   padding: .125em;
+}
+
+.job ul.job-when-where {
+  list-style: none;
+  padding: 0;
+}
+
+.job ul.job-when-where > li {
+  display: inline;
+  //margin-right: .25em;
+}
+
+.job ul.job-when-where > li:not(:last-child)::after {
+  content: "\00b7";
+  margin-left: .33em;
 }
 
 #hobbies ul {

@@ -11,6 +11,8 @@ permalink: /cv2/
 #
 ---
 
+{% assign enable_izi_modal_job_details = 1 %}
+
 {% assign R = site.data.resume_raw %}
 
 <div class="row">
@@ -39,15 +41,13 @@ permalink: /cv2/
             <div class="col-md-10">
               <h4 class="job-title">{{ W.job_title }}</h4>
 
-              <span class="job-when-where">
-                {{ W.period_start | date: "%B %Y" }}
-                &ndash; {{ W.period_end | date: "%B %Y" }}
-                | <a href="{{ W.job_company_url }}" target="_blank">
-                    {{ W.job_company }}</a>
-              </span>
-
-              <strong class="subject-title">{{ W.subject_title }}</strong>
-              / <span class="subject-type">{{ W.subject_type }}</span>
+              <ul class="job-when-where">
+                <li>{{ W.period_start | date: "%B %Y" }}
+                  &ndash; {{ W.period_end | date: "%B %Y" }}</li>
+                <li><a href="{{ W.job_company_url }}">{{ W.job_company }}</a></li>
+                <li><strong class="subject-title">{{ W.subject_title }}</strong></li>
+                <li><span class="subject-type">{{ W.subject_type }}</span></li>
+              </ul>
 
               <ul class="job-tasks-list">
               {% for task_value in W.tasks %}
@@ -57,19 +57,22 @@ permalink: /cv2/
             </div> <!--/ .col-md-12 -->
             <div class="col-md-2 subject-thumbnail">
               {% if W.subject_url -%}
-                <a href="{{ W.subject_url }}" target="_blank">
+                <a href="{{ W.subject_url }}"
+                   class="job-detail-modal-trigger"
+                   data-job-code="{{ W.code }}">
                   <img title="{{ W.subject_title }}"
                        class="float-this film-thumb"
                        src="{{ W.subject_thumbnail }}"></a>
               {%- else -%}
+              <a href="#" class="job-detail-modal-trigger"
+                 data-job-code="{{ W.code }}">
                 <img title="{{ W.subject_title }}"
                      class="float-this film-thumb"
-                     src="{{ W.subject_thumbnail }}">
+                     src="{{ W.subject_thumbnail }}"></a>
               {%- endif -%}
             </div> <!--/ .col-md-4 -->
-            </div> <!--/ #work-item-N / .row /-->
+          </div> <!--/ #job-id-N / .row /-->
         {% endif %}
-        <!--<div style="clear: both;"></div>-->
       {% endfor %}
     </div> <!--/ #work-experiences /-->
 
@@ -92,8 +95,8 @@ permalink: /cv2/
                 <td>
                   {{ data_value.school_name }}
                   {% if data_value.school_url %}
-                    (<a href="{{ data_value.school_url }}"
-                        target="_blank">{{ data_value.school_shortname }}</a>)
+                    (<a href="{{ data_value.school_url }}">
+                       {{ data_value.school_shortname }}</a>)
                   {% endif %}
                   <br>
                   <small>{{ data_value.school_place }}</small>
@@ -120,7 +123,6 @@ permalink: /cv2/
         </div> <!--/ .col-md-12 -->
       </div> <!--/ .row -->
     </div> <!--/ #hobbies /-->
-
 
 
     <!--
@@ -160,7 +162,64 @@ permalink: /cv2/
       </div>
     </div> <!--/ TEMP SAMPLE "panel" thing /-->
 
+
+    <!--
+         Job details for jQuery IziModal
+         ( http://izimodal.marcelodolce.com/ )
+                                               -->
+    {% if enable_izi_modal_job_details %}
+      <div id="izi-modal-divs">
+        {% for W in Wlist %}
+          {% if W.publish or jekyll.environment == "development" %}
+            <div id="job-detail-modal-{{ W.code }}"
+                 class="job-detail-modal">
+              <h4 class="job-title">{{ W.subject_title }}</h4>
+
+              {% for video in W.tubes %}
+                {% if video.type == "youtube" %}
+                  <div class="video-embed video-embed-youtube">
+                    <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/{{ video.id }}"
+                            frameborder="0" gesture="media"
+                            allow="encrypted-media" allowfullscreen></iframe>
+                  </div> <!--/ .video-embed /-->
+                {% elsif video.type == "vimeo" %}
+                  <div class="video-embed video-embed-youtube">
+                    <iframe src="https://player.vimeo.com/video/{{ video.id }}?byline=0&portrait=0"
+                            width="640" height="360" frameborder="0"
+                            webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                  </div> <!--/ .video-embed /-->
+                {% elsif video.url %}
+                  <a href="{{ video.url }}">
+                    {{ video.url }}</a>
+                {% else %}
+                  <strong><em>WTF is that video dude ?!
+                    (unknown <code>video.type</code>).</em></strong>
+                {% endif %}
+              {% else %}
+                <!-- Tubes list for-loop fallback (else-case) -->
+                <div class="center">
+                  <img title="{{ W.subject_title }}"
+                       style="max-width: 640px;max-height: 480px"
+                       src="{{ W.subject_thumbnail }}">
+                </div>
+              {% endfor %}
+            </div> <!--/ #job-detail-modal-{{ W.code }} / .row /-->
+
+            {% if false %}
+              <!-- DEBUG: Trigger links to open Modal. -->
+              <a href="{{ W.subject_url }}"
+                 class="job-detail-modal-trigger"
+                 data-job-code="{{ W.code }}">
+                {{ W.subject_title }}</a>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </div> <!--/ #izi-modal-divs /-->
+    {% endif %}
+
   </div> <!--/ #content / .col-md-8 /-->
+
 
   <!--
        RIGHT "SIDEBAR"
@@ -174,10 +233,11 @@ permalink: /cv2/
       {% if true %}
         <div class="pdf-export-widget">
           {% assign cv_url = page.url | absolute_url | uri_escape %}
-          {% assign filename = "Matthieu_Cadet_-_CV_" | append: (site.time | date: '%Y') %}
+          {% assign cv_year = site.time | date: '%Y' %}
+          {% assign filename = "Matthieu_Cadet_-_CV_" | append: cv_year %}
           <a href="http://js.fabic.net/_/pdf/{{ cv_url }}?fn={{ filename }}"
              title="Get page as PDF">
-            <span class="far fa-file-pdf"></span></a>
+            <span class="far fa-file-pdf fa-3x"></span></a>
         </div> <!--/ .pdf-export-widget -->
       {% endif %}
 
@@ -220,10 +280,72 @@ permalink: /cv2/
   </div> <!--/ #aside / .col-md-4 / RIGHT SIDEBAR /-->
 </div> <!--/ .row / MAIN LAYOUT "ROW" /-->
 
+
+<!--
+      JAVASCRIPT
+                  -->
 <script type="text/javascript">
-  // Custom stylesheet is added with JS because Jekyll/Liquid does not provide
-  // a way to modify <head> from inheriting pages.
   jQuery(document).ready(function() {
+    // Custom stylesheet is added with JS because Jekyll/Liquid does not provide
+    // a way to modify <head> from inheriting pages.
     Utils.addStyleSheet("/css/resume-bs.css");
+
+    /**
+     * @link http://izimodal.marcelodolce.com
+     */
+    (function InitIziModalJobDetails() {
+      console.info('InitIziModalJobDetails().');
+
+      let jobDetailModalsList = $('.job-detail-modal');
+
+      let iziModalJobDetailsEnabled = jobDetailModalsList.length == 0;
+
+      if (iziModalJobDetailsEnabled) {
+        console.warn('` Found no container elements with class job-detail-modal.');
+        return;
+      }
+
+      // See setup ex.: http://izimodal.marcelodolce.com/js/demo.js?v=152
+      jobDetailModalsList.iziModal({
+        history: true,
+        // top: 50,
+        // bottom: 50,
+        // timeout: 5000,
+        timeoutProgressbar: true,
+        timeoutProgressbarColor: 'white',
+        arrowKeys: true,
+        width: 680,
+        padding: 20,
+        restoreDefaultContent: true,
+        group: 'job-details',
+        loop: true,
+        fullscreen: false,
+        onResize: function(modal){
+          // console.log(modal.modalHeight);
+        },
+        afterRender: function(modal){
+          // modal.open();
+        },
+        /*  transitionIn: false,
+            transitionOut: false,
+            transitionInOverlay: false,
+            transitionOutOverlay: false */
+      });
+
+      $(document).on('click', '.job-detail-modal-trigger', function (event) {
+        event.preventDefault();
+        // $('#modal').iziModal('setZindex', 99999);
+        // $('#modal').iziModal('open', { zindex: 99999 });
+        // $('#modal').iziModal('open');
+        let that = $(this);
+        let jobCode = that.attr('data-job-code');
+        let jobDetailsCntrId = "job-detail-modal-" + jobCode;
+        let jobDetailsCntr = $(`#${jobDetailsCntrId}`);
+        console.log(this, jobCode, jobDetailsCntr);
+
+        jobDetailsCntr.iziModal('open');
+      });
+    })();
+
   });
 </script>
