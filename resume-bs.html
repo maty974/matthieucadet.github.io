@@ -1,0 +1,190 @@
+---
+layout: bootstrap-base
+title: Curriculum Vitae [#8/Bootstrap-v4/experimental]
+permalink: /cv2/
+---
+
+{% assign R = site.data.resume_raw %}
+
+<div class="row">
+  <div class="col-md-8">
+    <div class="page-header">
+      <h1>
+        {{ R.author.name }}
+        <small>{{ R.head_title }}</small>
+      </h1>
+    </div> <!--/ .page-header /-->
+
+    <p class="lead">
+      {{ R.head_description }}
+    </p>
+
+    <h3>
+      h3. Lorem ipsum dolor sit amet.
+    </h3>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              Panel title
+            </h3>
+          </div>
+          <div class="panel-body">
+            Panel content
+          </div>
+          <div class="panel-footer">
+            Panel footer
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              Panel title
+            </h3>
+          </div>
+          <div class="panel-body">
+            Panel content
+          </div>
+          <div class="panel-footer">
+            Panel footer
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{ content }}
+  </div> <!--/ .col-md-8 / layout.html.njk /-->
+
+  <!-- Right "sidebar" :: layout.html.njk -->
+  <div class="col-md-4">
+    <address>
+      <strong>Twitter, Inc.</strong><br> 795 Folsom Ave, Suite 600<br> San Francisco, CA 94107<br> <abbr
+      title="Phone">P:</abbr> (123) 456-7890
+    </address>
+    <h3>
+      h3. Lorem ipsum dolor sit amet.
+    </h3>
+    <p>
+      Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien.
+      Curabitur
+      in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus
+      nibh,
+      lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi
+      id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam
+      velit
+      et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus.
+      <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat
+        ipsum consequat eu.
+      </small>
+    </p>
+    <p class="lead">
+      Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien.
+      Curabitur
+      in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus
+      nibh,
+      lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi
+      id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam
+      velit
+      et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus.
+      <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat
+        ipsum consequat eu.
+      </small>
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien.
+      Curabitur
+      in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus
+      nibh,
+      lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi
+      id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam
+      velit
+      et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus.
+      <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat
+        ipsum consequat eu.
+      </small>
+    </p>
+  </div> <!--/ .col-md-4 / layout.html.njk /-->
+</div> <!--/ .row / layout.html.njk /-->
+
+<hr><hr>
+
+{{ site.data.resume_raw.author.name }}
+==============
+<img title=""
+     class="float-this film-thumb"
+     src="/static/matthieu-cadet-portrait.png">
+_{{ site.data.resume_raw.head_title }}_
+
+<!-- Description -->
+
+{{ site.data.resume_raw.head_description }}
+
+* __Né à :__ {{ site.data.resume_raw.author.birthplace }}
+* __Nationalité :__ {{ site.data.resume_raw.author.nationality }}
+* __État civil :__ {{ site.data.resume_raw.author.civil_status }}
+* __Langues :__ {{ site.data.resume_raw.author.language }}
+* __e-mail :__ [{{ site.data.resume_raw.author.email }}](mailto:{{ site.data.resume_raw.author.email }})
+* __Téléphone :__ [{{ site.data.resume_raw.author.tel }}](tel:{{ site.data.resume_raw.author.tel }})
+* __Site web :__ [{{ site.data.resume_raw.author.website }}]({{ site.data.resume_raw.author.website }})
+
+Connaissances Techniques
+------------------------
+<!-- Logiciels -->
+
+### {{ site.data.resume_raw.softwares.label }} :
+{% for data_value in site.data.resume_raw.softwares.list %}
+- {{ data_value -}}
+{% endfor %}
+
+<!-- Programmation -->
+
+### {{ site.data.resume_raw.programming_skills.label }} :
+{% for data_value in site.data.resume_raw.programming_skills.list %}
+- {{ data_value -}}
+{% endfor %}
+
+<!-- Expérience Professionnelle -->
+
+{{ site.data.resume_raw.work_experiences.label }}
+-------------------------
+<!-- TODO: add french month name https://stackoverflow.com/a/38946698 -->
+{% assign work_experiences = site.data.resume_raw.work_experiences.list | sort: 'period_end' | reverse %}
+{% for data_value in work_experiences %}
+{% if data_value.publish or jekyll.environment == "development" %}
+### {{ data_value.job_title }}
+<span class="cv-when-where">{{ data_value.period_start | date: "%B %Y" }} &ndash; {{ data_value.period_end | date: "%B %Y" }} | <a href="{{ data_value.job_company_url }}" target="_blank">{{ data_value.job_company }}</a></span>
+<a {% if data_value.subject_url -%}
+    href="{{ data_value.subject_url }}" target="_blank"
+{%- endif -%}>
+<img title="{{ data_value.subject_title }}"
+    class="float-this film-thumb"
+    src="{{ data_value.subject_thumbnail }}">
+</a>
+
+*{{ data_value.subject_title }}* / {{ data_value.subject_type }}
+{% for task_value in data_value.tasks %}
+- {{ task_value -}}
+{% endfor %}
+{% endif %}
+<div style="clear: both;"></div>
+{% endfor %}
+
+<!-- Formations -->
+
+{{ site.data.resume_raw.education.label }}
+---------
+{% for data_value in site.data.resume_raw.education.list %}
+__{{ data_value.period }}__ | {{ data_value.degree }} | {{ data_value.school_name }} {% if data_value.school_url %}(<a href="{{ data_value.school_url }}" target="_blank">{{ data_value.school_shortname }}</a>){% endif %}<br><small>{{ data_value.school_place }}</small>
+{%- endfor %}
+
+<!-- Loisirs -->
+
+{{ site.data.resume_raw.hobbies.label }}
+-------
+{% for data_value in site.data.resume_raw.hobbies.list %}
+- {{ data_value -}}
+{% endfor %}
