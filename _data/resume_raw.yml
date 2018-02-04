@@ -1,4 +1,4 @@
-author_data:
+author:
   name: Matthieu Cadet
   birthdate: 7 Fevrier 1984
   birthplace: l'Île de La Réunion en 1984
@@ -52,7 +52,7 @@ education:
       school_logo: null
       period: 2002&ndash;2005
       degree: Diplômé du Cycle Professionnel Cinéma d'animation 3D et Effets Spéciaux
-    
+
     - code: vollard
       school_name: Lycée Ambroise Vollard
       school_shortname: null
