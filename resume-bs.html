@@ -288,6 +288,12 @@ permalink: /cv2/
     Utils.addStyleSheet("/css/resume-bs.css");
 
     /**
+     * Setup those modal windows ( video tubes ).
+     *
+     * Note: Tubes gets loaded on-demand when the modal window is opened.
+     *       See event 'onOpening: ...' callback.
+     *       See SetupTubes().
+     *
      * @link http://izimodal.marcelodolce.com
      */
     (function InitIziModalJobDetails() {
@@ -334,18 +340,17 @@ permalink: /cv2/
             transitionOutOverlay: false */
       });
 
+      // Setup on-click event handler.
       $(document).on('click', '.job-detail-modal-trigger', function (event) {
+        // Prevent following links.
         event.preventDefault();
-        // $('#modal').iziModal('setZindex', 99999);
-        // $('#modal').iziModal('open', { zindex: 99999 });
-        // $('#modal').iziModal('open');
         let that = $(this);
         let jobCode = that.attr('data-job-code');
         let jobDetailsCntrId = "job-detail-modal-" + jobCode;
         let jobDetailsCntr = $(`#${jobDetailsCntrId}`);
         console.log(this, jobCode, jobDetailsCntr);
 
-        jobDetailsCntr.iziModal('open');
+        jobDetailsCntr.iziModal('open' /*, { zindex: 99999 } */);
       });
     })();
 

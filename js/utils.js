@@ -47,7 +47,8 @@ Utils.addStyleSheet = function _utils_add_stylesheet(url) {
  *
  * @return void
  */
-function SetupTubes(cntr) {
+function SetupTubes(cntr)
+{
   cntr = $( cntr );
   console.info(`SetupTubes('${cntr.attr('id')}').`);
 
