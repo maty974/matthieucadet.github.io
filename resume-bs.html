@@ -1,6 +1,7 @@
 ---
 layout: bootstrap-base
 title: Curriculum Vitae [#8/Bootstrap-v4/experimental]
+tagline: Bootstrap is cool, but HTML sucks big time.
 permalink: /cv2/
 #
 # NOTE:
@@ -12,6 +13,8 @@ permalink: /cv2/
 ---
 
 {% assign enable_izi_modal_job_details = 1 %}
+
+{% assign enable_external_pdf_export = false %}
 
 {% assign R = site.data.resume_raw %}
 
@@ -241,7 +244,7 @@ permalink: /cv2/
            alt="Photo: {{ R.author.name }}"
            src="/static/matthieu-cadet-portrait.png">
 
-      {% if true %}
+      {% if enable_external_pdf_export %}
         <div class="pdf-export-widget">
           {% assign cv_url = page.url | absolute_url | uri_escape %}
           {% assign cv_year = site.time | date: '%Y' %}

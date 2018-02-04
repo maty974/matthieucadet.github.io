@@ -1,0 +1,63 @@
+---
+layout: default
+title: Curriculum Vitae (iframe)
+tagline: yeah man
+permalink: /_cv/
+---
+
+  <!-- Note that it is _quite difficult_ to get the size of an iframe right. -->
+
+  <div class="center">
+    <a href="/cv2/">{{ "/cv2/" | absolute_url }}</a>
+  </div>
+
+  <iframe id="nasty-iframe"
+          src="/cv2/"
+          style="border: 1px solid #ddd; height: calc(82vh - 30px); width: calc(83vw - 30px);"
+          width="800" height="600"
+          frameborder="0"
+          allowfullscreen></iframe>
+
+
+  <script>
+    if (false) {
+      // Trying the JS approach of resizing the iframe dynamically.
+      //  ` but result is not great.
+      // https://stackoverflow.com/a/32118972
+      document.addEventListener("DOMContentLoaded", function(event) {
+        console.info("Dude: Trying to fix this pesky <iframe> dimensions (not easy).");
+
+        let $iframe = document.getElementById("nasty-iframe");
+
+        // Calculate the total offset top of given jquery element
+        function totalOffsetTop($elem) {
+          return $elem.offsetTop
+            + ($elem.offsetParent ? totalOffsetTop($elem.offsetParent) : 0);
+        }
+
+        function resizeIframe() {
+          // HEIGHT
+          var height = window.innerHeight
+                         || document.body.clientHeight
+                         || document.documentElement.clientHeight ;
+
+          const margin = 16; // FIXME.
+          height -= totalOffsetTop( $iframe ) - margin;
+
+          // WIDTH
+          var width = window.innerWidth
+                         || document.body.clientWidth
+                         || document.documentElement.clientWidth ;
+          width -= totalOffsetTop( $iframe ) - margin;
+
+          $iframe.height = Math.max(0, height) + 'px';
+          $iframe.width  = Math.max(0, width) + 'px';
+
+          console.info(`Resized iframe: ${height} x ${width}`);
+        }
+
+        $iframe.onload = resizeIframe();
+        window.onresize = resizeIframe;
+      });
+    }
+  </script>

@@ -40,7 +40,10 @@
                   <tt>{{ node.url }}</tt>
                 {% endif %}
               </a>
-              <tt>{{ note.url }}</tt>
+              {% if node.tagline %}
+              <br><small>{{ node.tagline }}</small>
+              {% endif %}
+              <tt style="font-size: .8em; color: #777; float: right;">{{ node.url }}</tt>
             </td>
             <td>
               <tt>{{ node.layout }}</tt>
