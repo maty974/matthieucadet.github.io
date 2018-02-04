@@ -1,0 +1,52 @@
+---
+# Jekyll front matter.
+---
+/**
+ * `css/resume-bs.scss`
+ *
+ * SASS stylesheet for /resume-bs.html
+ */
+
+//// RIGHT SIDE BAR ////////////////////////////////////////////////////////////
+
+#aside {
+  border-left: 1px solid #333;
+  padding: 0 .25em;
+}
+
+#author-photo {
+  width: 33%;
+}
+
+#etat-civil {
+  padding-left: 0;
+  list-style: none;
+}
+
+//// MAIN CONTENT //////////////////////////////////////////////////////////////
+
+.page-header .author-head-title {
+  color: #444;
+  font-size: .66em;
+}
+
+.page-header .lead {
+  color: #555;
+}
+
+#work-experiences > h3,
+#education > h3,
+#hobbies > h3 {
+  border-bottom: 1px solid #444;
+}
+
+.job .subject-thumbnail img {
+  width: 100%;
+  padding: .125em;
+}
+
+#hobbies ul {
+
+}
+
+/* EOF */
