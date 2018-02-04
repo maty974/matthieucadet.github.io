@@ -91,6 +91,10 @@ work_experiences:
       subject_url: "https://youtu.be/9BFweFCDpsM"
       tubes:
           - { id: "9BFweFCDpsM", type: youtube }
+      compare_files:
+        - { id: '015_0010' }
+        - { id: '015_0020' }
+        - { id: '015_0030' }
       period_start: 2015-11-01
       period_end: 2016-07-30
       job_company: nWave Digital
@@ -110,6 +114,10 @@ work_experiences:
       subject_url: "https://vimeo.com/133013937"
       tubes:
           - { id: "133013937", type: "vimeo" }
+      compare_files:
+        - { id: '055_0070' }
+        - { id: '055_0160' }
+        - { id: '055_0250' }
       period_start: 2013-11-01
       period_end: 2015-11-30
       job_company: nWave Digital
@@ -128,6 +136,13 @@ work_experiences:
       subject_url: "https://vimeo.com/77062169"
       tubes:
           - { id: "77062169", type: "vimeo" }
+      compare_files:
+        - { id: '130_0030' }
+        - { id: '130_0060' }
+        - { id: '130_0080' }
+        - { id: '130_0090' }
+        - { id: '130_0180' }
+        - { id: '130_0230' }
       period_start: 2012-05-01
       period_end: 2013-11-30
       job_company: nWave Digital

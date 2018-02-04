@@ -76,6 +76,7 @@ permalink: /cv2/
       {% endfor %}
     </div> <!--/ #work-experiences /-->
 
+
     <!-- Formations -->
     <div id="education">
       <h3>{{ R.education.label }}</h3>
@@ -108,6 +109,7 @@ permalink: /cv2/
         </div> <!--/ .col-md-12 /-->
       </div> <!--/ .row /-->
     </div> <!--/ #education /-->
+
 
     <!-- Loisirs -->
     <div id="hobbies">
@@ -175,6 +177,7 @@ permalink: /cv2/
                  class="job-detail-modal">
               <h4 class="job-title">{{ W.subject_title }}</h4>
 
+              <!-- Tubes -->
               {% for video in W.tubes %}
                 {% if video.type == "youtube" %}
                   <div class="video-embed video-embed-youtube"
@@ -197,10 +200,19 @@ permalink: /cv2/
                 <!-- Tubes list for-loop fallback (else-case) -->
                 <div class="center">
                   <img title="{{ W.subject_title }}"
-                       style="max-width: 640px;max-height: 480px"
+                       style="max-width: 640px; max-height: 480px"
                        src="{{ W.subject_thumbnail }}">
                 </div>
               {% endfor %}
+
+              <!-- TwentyTwenty compare before-after images. -->
+              {% for item in W.compare_files %}
+                <div id="twenty2-cntr-id-{{ item.id }}"
+                     class="twenty2-container"
+                     data-images-id="{{ item.id }}">
+                </div> <!--/ .twenty2-container /-->
+              {% endfor %}
+
             </div> <!--/ #job-detail-modal-{{ W.code }} / .row /-->
 
             {% if false %}
@@ -281,11 +293,52 @@ permalink: /cv2/
 <!--
       JAVASCRIPT
                   -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.twentytwenty.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.event.move.min.js"></script>
+
 <script type="text/javascript">
   jQuery(document).ready(function() {
     // Custom stylesheet is added with JS because Jekyll/Liquid does not provide
     // a way to modify <head> from inheriting pages.
     Utils.addStyleSheet("/css/resume-bs.css");
+    Utils.addStyleSheet("//cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/css/twentytwenty.min.css");
+
+    /**
+     * Experimental : on-demand setup of compare files TwentyTwenty thing...
+     */
+    function SetupTwentyTwentyBeneath(parentCntr, selector) {
+      parentCntr = $(parentCntr);
+      console.info(`SetupTwentyTwentyBeneath(${parentCntr.attr('id')}, '${selector}').`);
+
+      let containers = parentCntr.find(selector);
+
+      if (containers.length < 1) {
+        console.info(" -> Found no TwentyTwenty thing to setup here.");
+        return;
+      }
+
+      containers.each(function(_index, cntr) {
+        cntr = $(cntr);
+        let movieFrameId = cntr.attr('data-images-id');
+        console.info(` - ${cntr.attr('id')} : ${movieFrameId}.`);
+
+        let div = jQuery(`<div class="twentytwenty-container centered" style="min-width: 800px; min-height: 450px;"></div>`),
+            img1 = jQuery(`<img src="/static/compositing_work/slider-sized/${movieFrameId}_int_precomp_lgt_l.jpg"/>`),
+            img2 = jQuery(`<img src="/static/compositing_work/slider-sized/${movieFrameId}_int_final_l.jpg"/>`) ;
+
+        div.append(img1, img2);
+
+        cntr.append( div );
+
+        window.requestAnimationFrame(function() {
+          div.twentytwenty({
+            no_overlay: false
+          });
+        });
+
+        console.info(`   done.`);
+      });
+    }
 
     /**
      * Setup those modal windows ( video tubes ).
@@ -314,10 +367,18 @@ permalink: /cv2/
         // top: 50,
         // bottom: 50,
         // timeout: 5000,
+        title: "Welcome to ...",
+        // subtitle: "Simple, complete and lightweight modal plugin with jquery.",
+        icon: 'icon-chat',
+        // overlayColor: 'rgba(255, 255, 255, 0.4)',
+        // headerColor: '#334c7b',
+        iconColor: 'white',
         timeoutProgressbar: true,
         timeoutProgressbarColor: 'white',
         arrowKeys: true,
         width: 680,
+        bodyOverflow: true,
+        closeButton: true,
         padding: 20,
         restoreDefaultContent: true,
         group: 'job-details',
@@ -327,6 +388,11 @@ permalink: /cv2/
           console.info("iziModal :: onOpening().");
           let cntr = modal.$element;
           SetupTubes( cntr );
+        },
+        onOpened: function(modal) {
+          console.info("iziModal :: onOpened().");
+          let cntr = modal.$element;
+          SetupTwentyTwentyBeneath(cntr, '.twenty2-container');
         },
         onResize: function(modal) {
           // console.log(modal.modalHeight);
