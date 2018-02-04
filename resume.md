@@ -4,7 +4,7 @@ title: Curriculum Vitae
 permalink: /cv/
 ---
 
-{{ site.data.resume_raw.author_data.name }}
+{{ site.data.resume_raw.author.name }}
 ==============
 <img title=""
      class="float-this film-thumb"
@@ -15,13 +15,13 @@ _{{ site.data.resume_raw.head_title }}_
 
 {{ site.data.resume_raw.head_description }}
 
-* __Né à :__ {{ site.data.resume_raw.author_data.birthplace }}
-* __Nationalité :__ {{ site.data.resume_raw.author_data.nationality }}
-* __État civil :__ {{ site.data.resume_raw.author_data.civil_status }}
-* __Langues :__ {{ site.data.resume_raw.author_data.language }}
-* __e-mail :__ [{{ site.data.resume_raw.author_data.email }}](mailto:{{ site.data.resume_raw.author_data.email }})
-* __Téléphone :__ [{{ site.data.resume_raw.author_data.tel }}](tel:{{ site.data.resume_raw.author_data.tel }})
-* __Site web :__ [{{ site.data.resume_raw.author_data.website }}]({{ site.data.resume_raw.author_data.website }})
+* __Né à :__ {{ site.data.resume_raw.author.birthplace }}
+* __Nationalité :__ {{ site.data.resume_raw.author.nationality }}
+* __État civil :__ {{ site.data.resume_raw.author.civil_status }}
+* __Langues :__ {{ site.data.resume_raw.author.language }}
+* __e-mail :__ [{{ site.data.resume_raw.author.email }}](mailto:{{ site.data.resume_raw.author.email }})
+* __Téléphone :__ [{{ site.data.resume_raw.author.tel }}](tel:{{ site.data.resume_raw.author.tel }})
+* __Site web :__ [{{ site.data.resume_raw.author.website }}]({{ site.data.resume_raw.author.website }})
 
 Connaissances Techniques
 ------------------------

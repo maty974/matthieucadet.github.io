@@ -1,0 +1,79 @@
+---
+# Jekyll front matter.
+---
+/**
+ * `css/resume-bs.scss`
+ *
+ * SASS stylesheet for /resume-bs.html
+ */
+
+//// RIGHT SIDE BAR #aside /////////////////////////////////////////////////////
+
+#aside {
+  border-left: 1px solid #ddd;
+  padding: .25em .5em;
+  background-color: #fefefe;
+}
+
+#author-photo {
+  width: 33%;
+}
+
+#etat-civil {
+  padding-left: 0;
+  list-style: none;
+}
+
+//// MAIN CONTENT #content /////////////////////////////////////////////////////
+
+#content {
+  padding-right: 0;
+}
+
+.page-header .author-head-title {
+  color: #444;
+  font-size: .55em;
+}
+
+.page-header .lead {
+  color: #555;
+}
+
+#work-experiences,
+#education,
+#hobbies {
+  margin-top: 1em;
+}
+
+#work-experiences > h3,
+#education > h3,
+#hobbies > h3 {
+  border-bottom: 1px solid #ddd;
+  background-color: #f5f5f5;
+}
+
+.job .subject-thumbnail img {
+  width: 100%;
+  padding: .125em;
+}
+
+.job ul.job-when-where {
+  list-style: none;
+  padding: 0;
+}
+
+.job ul.job-when-where > li {
+  display: inline;
+  //margin-right: .25em;
+}
+
+.job ul.job-when-where > li:not(:last-child)::after {
+  content: "\00b7";
+  margin-left: .33em;
+}
+
+#hobbies ul {
+
+}
+
+/* EOF */

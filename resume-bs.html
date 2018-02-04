@@ -1,0 +1,358 @@
+---
+layout: bootstrap-base
+title: Curriculum Vitae [#8/Bootstrap-v4/experimental]
+permalink: /cv2/
+#
+# NOTE:
+#   - Layout is from: http://bit.ly/2s1BxBV
+#   - Custom SASS/CSS ``/css/resume-bs.scss`` is added by JS `Utils.addStyleSheet()`
+#     ` see script at bottom of file.
+#   - #8 : https://github.com/maty974/maty974.github.io/issues/8
+#
+---
+
+{% assign enable_izi_modal_job_details = 1 %}
+
+{% assign R = site.data.resume_raw %}
+
+<div class="row">
+  <div id="content" class="col-md-9">
+    <div class="page-header">
+      <h1>
+        <span class="author-name">{{ R.author.name }}</span><br>
+        <span class="author-head-title">{{ R.head_title }}</span>
+      </h1>
+      <p class="lead">
+        {{ R.head_description }}
+      </p>
+    </div> <!--/ .page-header /-->
+
+
+    <!-- Expérience Professionnelle -->
+    <div id="work-experiences" class="">
+      <h3>{{ R.work_experiences.label }}</h3>
+
+      <!-- TODO: add french month name https://stackoverflow.com/a/38946698 -->
+      {% assign Wlist = R.work_experiences.list | sort: 'period_end' | reverse %}
+      {% for W in Wlist %}
+        {% if W.publish or jekyll.environment == "development" %}
+          <div id="job-id-{{ forloop.index}}"
+               class="row job">
+            <div class="col-md-10">
+              <h4 class="job-title">{{ W.job_title }}</h4>
+
+              <ul class="job-when-where">
+                <li>{{ W.period_start | date: "%B %Y" }}
+                  &ndash; {{ W.period_end | date: "%B %Y" }}</li>
+                <li><a href="{{ W.job_company_url }}">{{ W.job_company }}</a></li>
+                <li><strong class="subject-title">{{ W.subject_title }}</strong></li>
+                <li><span class="subject-type">{{ W.subject_type }}</span></li>
+              </ul>
+
+              <ul class="job-tasks-list">
+              {% for task_value in W.tasks %}
+                <li>{{ task_value -}}</li>
+              {% endfor %}
+              </ul>
+            </div> <!--/ .col-md-12 -->
+            <div class="col-md-2 subject-thumbnail">
+              {% if W.subject_url -%}
+                <a href="{{ W.subject_url }}"
+                   class="job-detail-modal-trigger"
+                   data-job-code="{{ W.code }}">
+                  <img title="{{ W.subject_title }}"
+                       class="float-this film-thumb"
+                       src="{{ W.subject_thumbnail }}"></a>
+              {%- else -%}
+              <a href="#" class="job-detail-modal-trigger"
+                 data-job-code="{{ W.code }}">
+                <img title="{{ W.subject_title }}"
+                     class="float-this film-thumb"
+                     src="{{ W.subject_thumbnail }}"></a>
+              {%- endif -%}
+            </div> <!--/ .col-md-4 -->
+          </div> <!--/ #job-id-N / .row /-->
+        {% endif %}
+      {% endfor %}
+    </div> <!--/ #work-experiences /-->
+
+    <!-- Formations -->
+    <div id="education">
+      <h3>{{ R.education.label }}</h3>
+
+      <div class="row">
+        <div class="col-md-12">
+          <table class="education-list">
+            <tbody>
+            {% for data_value in site.data.resume_raw.education.list %}
+              <tr>
+                <th>
+                  {{ data_value.period }}
+                </th>
+                <td>
+                  {{ data_value.degree }}
+                </td>
+                <td>
+                  {{ data_value.school_name }}
+                  {% if data_value.school_url %}
+                    (<a href="{{ data_value.school_url }}">
+                       {{ data_value.school_shortname }}</a>)
+                  {% endif %}
+                  <br>
+                  <small>{{ data_value.school_place }}</small>
+                </td>
+              </tr>
+            {%- endfor %}
+            </tbody>
+          </table>
+        </div> <!--/ .col-md-12 /-->
+      </div> <!--/ .row /-->
+    </div> <!--/ #education /-->
+
+    <!-- Loisirs -->
+    <div id="hobbies">
+      <h3>{{ R.hobbies.label }}</h3>
+
+      <div class="row">
+        <div class="col-md-12">
+          <ul>
+          {% for data_value in site.data.resume_raw.hobbies.list %}
+            <li>{{ data_value -}}</li>
+          {% endfor %}
+          </ul>
+        </div> <!--/ .col-md-12 -->
+      </div> <!--/ .row -->
+    </div> <!--/ #hobbies /-->
+
+
+    <!--
+          STUB "panel" thing from layoutit
+          TODO: remove when we're done.
+                                             -->
+    <div class="row" style="background-color: lightyellow">
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              Panel title
+            </h3>
+          </div>
+          <div class="panel-body">
+            Panel content
+          </div>
+          <div class="panel-footer">
+            Panel footer
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              Panel title
+            </h3>
+          </div>
+          <div class="panel-body">
+            Panel content
+          </div>
+          <div class="panel-footer">
+            Panel footer
+          </div>
+        </div>
+      </div>
+    </div> <!--/ TEMP SAMPLE "panel" thing /-->
+
+
+    <!--
+         Job details for jQuery IziModal
+         ( http://izimodal.marcelodolce.com/ )
+                                               -->
+    {% if enable_izi_modal_job_details %}
+      <div id="izi-modal-divs">
+        {% for W in Wlist %}
+          {% if W.publish or jekyll.environment == "development" %}
+            <div id="job-detail-modal-{{ W.code }}"
+                 class="job-detail-modal">
+              <h4 class="job-title">{{ W.subject_title }}</h4>
+
+              {% for video in W.tubes %}
+                {% if video.type == "youtube" %}
+                  <div class="video-embed video-embed-youtube"
+                       data-video-type="youtube"
+                       data-video-id="{{ video.id }}">
+                  </div> <!--/ .video-embed /-->
+                {% elsif video.type == "vimeo" %}
+                  <div class="video-embed video-embed-youtube"
+                       data-video-type="vimeo"
+                       data-video-id="{{ video.id }}">
+                  </div> <!--/ .video-embed /-->
+                {% elsif video.url %}
+                  <a href="{{ video.url }}">
+                    {{ video.url }}</a>
+                {% else %}
+                  <strong><em>WTF is that video dude ?!
+                    (unknown <code>video.type</code>).</em></strong>
+                {% endif %}
+              {% else %}
+                <!-- Tubes list for-loop fallback (else-case) -->
+                <div class="center">
+                  <img title="{{ W.subject_title }}"
+                       style="max-width: 640px;max-height: 480px"
+                       src="{{ W.subject_thumbnail }}">
+                </div>
+              {% endfor %}
+            </div> <!--/ #job-detail-modal-{{ W.code }} / .row /-->
+
+            {% if false %}
+              <!-- DEBUG: Trigger links to open Modal. -->
+              <a href="{{ W.subject_url }}"
+                 class="job-detail-modal-trigger"
+                 data-job-code="{{ W.code }}">
+                {{ W.subject_title }}</a>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </div> <!--/ #izi-modal-divs /-->
+    {% endif %}
+
+  </div> <!--/ #content / .col-md-8 /-->
+
+
+  <!--
+       RIGHT "SIDEBAR"
+                       -->
+  <div id="aside" class="col-md-3">
+    <address id="author-details">
+      <img id="author-photo"
+           alt="Photo: {{ R.author.name }}"
+           src="/static/matthieu-cadet-portrait.png">
+
+      {% if true %}
+        <div class="pdf-export-widget">
+          {% assign cv_url = page.url | absolute_url | uri_escape %}
+          {% assign cv_year = site.time | date: '%Y' %}
+          {% assign filename = "Matthieu_Cadet_-_CV_" | append: cv_year %}
+          <a href="http://js.fabic.net/_/pdf/{{ cv_url }}?fn={{ filename }}"
+             title="Get page as PDF">
+            <span class="far fa-file-pdf fa-3x"></span></a>
+        </div> <!--/ .pdf-export-widget -->
+      {% endif %}
+
+      <ul id="etat-civil">
+        <li><strong>Né à :</strong>        {{ R.author.birthplace }}</li>
+        <li><strong>Nationalité :</strong> {{ R.author.nationality }}</li>
+        <li><strong>État civil :</strong>  {{ R.author.civil_status }}</li>
+        <li><strong>Langues :</strong>     {{ R.author.language }}</li>
+        <li><strong>e-mail :</strong>    <a href="mailto:{{ R.author.email }}">{{ R.author.email }}</a></li>
+        <li><strong>Téléphone :</strong> <a href="tel:{{ R.author.tel }}">{{ R.author.tel }}</a></li>
+        <li><strong>Site web :</strong>  <a href="{{ R.author.website }}">{{ R.author.website }}</a></li>
+      </ul>
+    </address>
+
+    <div id="skills-technical">
+      <h3>Connaissances Techniques</h3>
+
+      <!-- Logiciels -->
+      <div id="softwares">
+        <h4>{{ R.softwares.label }}</h4>
+
+        <ul>
+        {% for data_value in R.softwares.list %}
+          <li>{{ data_value -}}</li>
+        {% endfor %}
+        </ul>
+      </div> <!--/ #softwares /-->
+
+      <!-- Programmation -->
+      <div id="programming">
+        <h4>{{ R.programming_skills.label }}</h4>
+
+        <ul>
+        {% for data_value in site.data.resume_raw.programming_skills.list %}
+          <li>{{ data_value -}}</li>
+        {% endfor %}
+        </ul>
+      </div> <!--/ #programming /-->
+    </div> <!--/ #skills-technical /-->
+  </div> <!--/ #aside / .col-md-4 / RIGHT SIDEBAR /-->
+</div> <!--/ .row / MAIN LAYOUT "ROW" /-->
+
+
+<!--
+      JAVASCRIPT
+                  -->
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+    // Custom stylesheet is added with JS because Jekyll/Liquid does not provide
+    // a way to modify <head> from inheriting pages.
+    Utils.addStyleSheet("/css/resume-bs.css");
+
+    /**
+     * Setup those modal windows ( video tubes ).
+     *
+     * Note: Tubes gets loaded on-demand when the modal window is opened.
+     *       See event 'onOpening: ...' callback.
+     *       See SetupTubes().
+     *
+     * @link http://izimodal.marcelodolce.com
+     */
+    (function InitIziModalJobDetails() {
+      console.info('InitIziModalJobDetails().');
+
+      let jobDetailModalsList = $('.job-detail-modal');
+
+      let iziModalJobDetailsEnabled = jobDetailModalsList.length == 0;
+
+      if (iziModalJobDetailsEnabled) {
+        console.warn('` Found no container elements with class job-detail-modal.');
+        return;
+      }
+
+      // See setup ex.: http://izimodal.marcelodolce.com/js/demo.js?v=152
+      jobDetailModalsList.iziModal({
+        history: true,
+        // top: 50,
+        // bottom: 50,
+        // timeout: 5000,
+        timeoutProgressbar: true,
+        timeoutProgressbarColor: 'white',
+        arrowKeys: true,
+        width: 680,
+        padding: 20,
+        restoreDefaultContent: true,
+        group: 'job-details',
+        loop: true,
+        fullscreen: false,
+        onOpening: function(modal) {
+          console.info("iziModal :: onOpening().");
+          let cntr = modal.$element;
+          SetupTubes( cntr );
+        },
+        onResize: function(modal) {
+          // console.log(modal.modalHeight);
+        },
+        afterRender: function(modal) {
+          // modal.open();
+        },
+        /*  transitionIn: false,
+            transitionOut: false,
+            transitionInOverlay: false,
+            transitionOutOverlay: false */
+      });
+
+      // Setup on-click event handler.
+      $(document).on('click', '.job-detail-modal-trigger', function (event) {
+        // Prevent following links.
+        event.preventDefault();
+        let that = $(this);
+        let jobCode = that.attr('data-job-code');
+        let jobDetailsCntrId = "job-detail-modal-" + jobCode;
+        let jobDetailsCntr = $(`#${jobDetailsCntrId}`);
+        console.log(this, jobCode, jobDetailsCntr);
+
+        jobDetailsCntr.iziModal('open' /*, { zindex: 99999 } */);
+      });
+    })();
+
+  });
+</script>

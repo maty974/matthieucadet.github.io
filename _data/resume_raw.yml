@@ -1,4 +1,4 @@
-author_data:
+author:
   name: Matthieu Cadet
   birthdate: 7 Fevrier 1984
   birthplace: l'Île de La Réunion en 1984
@@ -7,7 +7,7 @@ author_data:
   language: Français & Anglais
   email: matthieu.cadet@gmail.com
   tel: +32 472 623 242
-  website: matthieucadet.info
+  website: http://matthieucadet.info
 
 head_title: Senior Compositing Artist & Technical Director &mdash; 10 ans d'expérience.
 
@@ -52,7 +52,7 @@ education:
       school_logo: null
       period: 2002&ndash;2005
       degree: Diplômé du Cycle Professionnel Cinéma d'animation 3D et Effets Spéciaux
-    
+
     - code: vollard
       school_name: Lycée Ambroise Vollard
       school_shortname: null
@@ -71,6 +71,7 @@ work_experiences:
       subject_thumbnail: /static/movie_posters/queen-corgis-poster.jpg
       subject_type: long metrage d'animation 3D
       subject_url: null
+      tubes: []
       period_start: 2017-01-01
       period_end: 2018-12-01
       job_company: nWave Digital
@@ -88,6 +89,8 @@ work_experiences:
       subject_thumbnail: /static/movie_posters/son-of-bigfoot-poster.jpg
       subject_type: long metrage d'animation 3D
       subject_url: "https://youtu.be/9BFweFCDpsM"
+      tubes:
+          - { id: "9BFweFCDpsM", type: youtube }
       period_start: 2015-11-01
       period_end: 2016-07-30
       job_company: nWave Digital
@@ -105,6 +108,8 @@ work_experiences:
       subject_thumbnail: /static/movie_posters/robinson-crusoe-poster.jpg
       subject_type: long metrage d'animation 3D
       subject_url: "https://vimeo.com/133013937"
+      tubes:
+          - { id: "133013937", type: "vimeo" }
       period_start: 2013-11-01
       period_end: 2015-11-30
       job_company: nWave Digital
@@ -121,6 +126,8 @@ work_experiences:
       subject_thumbnail: /static/movie_posters/house-of-magic-poster.jpg
       subject_type: long metrage d'animation 3D
       subject_url: "https://vimeo.com/77062169"
+      tubes:
+          - { id: "77062169", type: "vimeo" }
       period_start: 2012-05-01
       period_end: 2013-11-30
       job_company: nWave Digital
@@ -137,6 +144,8 @@ work_experiences:
       subject_thumbnail: /static/movie_posters/sammy2-poster.jpg
       subject_type: long metrage d'animation 3D
       subject_url: "https://youtu.be/pv8cs0RQJrI"
+      tubes:
+          - { id: "pv8cs0RQJrI", type: youtube }
       period_start: 2010-10-01
       period_end: 2012-05-30
       job_company: nWave Digital
@@ -153,6 +162,8 @@ work_experiences:
       subject_thumbnail: /static/movie_posters/the-little-prince-poster.jpg
       subject_type: Attraction 3D Stéréo
       subject_url: "https://youtu.be/35r3-y7BSts"
+      tubes:
+          - { id: "35r3-y7BSts", type: youtube }
       period_start: 2010-03-01
       period_end: 2010-09-30
       job_company: nWave Digital
@@ -169,6 +180,8 @@ work_experiences:
       subject_thumbnail: /static/movie_posters/pirates-story-poster.jpg
       subject_type: Attraction 3D Stéréo
       subject_url: "https://youtu.be/O9g0yu4Ms4A"
+      tubes:
+          - { id: "O9g0yu4Ms4A", type: youtube }
       period_start: 2009-11-01
       period_end: 2010-03-30
       job_company: nWave Digital
@@ -185,6 +198,8 @@ work_experiences:
       subject_thumbnail: /static/movie_posters/sammy1-poster.jpg
       subject_type: long metrage d'animation 3D
       subject_url: "https://vimeo.com/75391177"
+      tubes:
+          - { id: "75391177", type: "vimeo" }
       period_start: 2008-01-01
       period_end: 2009-11-30
       job_company: nWave Digital
@@ -201,6 +216,8 @@ work_experiences:
       subject_thumbnail: /static/movie_posters/fly-me-to-the-moon-poster.jpg
       subject_type: long metrage d'animation 3D
       subject_url: "https://youtu.be/a1smyXGnZao"
+      tubes:
+          - { id: "a1smyXGnZao", type: youtube }
       period_start: 2006-05-01
       period_end: 2007-08-30
       job_company: nWave Digital
@@ -217,6 +234,7 @@ work_experiences:
       subject_thumbnail: https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/US-NASA-BiotechnologyFacility-Logo.svg/600px-US-NASA-BiotechnologyFacility-Logo.svg.png
       subject_type: Risky
       subject_url: null
+      tubes: []
       period_start: 2049-12-01
       period_end: 2060-12-01
       job_company: ISS International
