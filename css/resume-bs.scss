@@ -7,11 +7,12 @@
  * SASS stylesheet for /resume-bs.html
  */
 
-//// RIGHT SIDE BAR ////////////////////////////////////////////////////////////
+//// RIGHT SIDE BAR #aside /////////////////////////////////////////////////////
 
 #aside {
-  border-left: 1px solid #333;
+  border-left: 1px solid #ddd;
   padding: 0 .25em;
+  background-color: #fdfdfd;
 }
 
 #author-photo {
@@ -23,21 +24,32 @@
   list-style: none;
 }
 
-//// MAIN CONTENT //////////////////////////////////////////////////////////////
+//// MAIN CONTENT #content /////////////////////////////////////////////////////
+
+#content {
+  padding-right: 0;
+}
 
 .page-header .author-head-title {
   color: #444;
-  font-size: .66em;
+  font-size: .55em;
 }
 
 .page-header .lead {
   color: #555;
 }
 
+#work-experiences,
+#education,
+#hobbies {
+  margin-top: 1em;
+}
+
 #work-experiences > h3,
 #education > h3,
 #hobbies > h3 {
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #ddd;
+  background-color: #f5f5f5;
 }
 
 .job .subject-thumbnail img {
