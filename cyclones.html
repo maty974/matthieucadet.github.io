@@ -7,22 +7,25 @@ tags: [wide, no-header]
 <!-- https://alvarotrigo.com/fullPage/ -->
 
 <div id="fullpage">
-  <div class="section">
-    <article>
-      <img src="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSGIODC_WV062_EastIndianOcean.jpg"
-           class="center" />
-    </article>
-  </div>
-  <div class="section">
+
+  <!-- Horizontal slider with many satellite photographies. -->
+
+  <div class="section" data-anchor="IODC">
     <div class="slide" data-anchor="RGBNatColour">
       <article>
         <img src="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSGIODC_RGBNatColour_WestIndianOcean.jpg"
              class="center" />
       </article>
     </div> <!--/ .slide -->
-    <div class="slide" data-anchor="IR039">
+    <div class="slide" data-anchor="RGBSolarDay">
       <article>
-        <img src="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSGIODC_IR039Color_WestIndianOcean.jpg"
+        <img src="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSGIODC_RGBSolarDay_WestIndianOcean.jpg"
+             class="center" />
+      </article>
+    </div> <!--/ .slide -->
+    <div class="slide" data-anchor="RGBMicrophysics">
+      <article>
+        <img src="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSGIODC_RGBMicrophysics_WestIndianOcean.jpg"
              class="center" />
       </article>
     </div> <!--/ .slide -->
@@ -38,9 +41,9 @@ tags: [wide, no-header]
              class="center" />
       </article>
     </div> <!--/ .slide -->
-    <div class="slide" data-anchor="RGBSolarDay">
+    <div class="slide" data-anchor="IR039">
       <article>
-        <img src="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSGIODC_RGBSolarDay_WestIndianOcean.jpg"
+        <img src="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSGIODC_IR039Color_WestIndianOcean.jpg"
              class="center" />
       </article>
     </div> <!--/ .slide -->
@@ -50,49 +53,79 @@ tags: [wide, no-header]
              class="center" />
       </article>
     </div> <!--/ .slide -->
-    <div class="slide" data-anchor="RGBMicrophysics">
+  </div> <!--/ IODC -->
+
+  <!-- Two black'n'white images from the WV062 satellite. -->
+
+  <div class="section" data-anchor="WV062">
+    <div class="slide" data-anchor="West-IndianOcean">
       <article>
-        <img src="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSGIODC_RGBMicrophysics_WestIndianOcean.jpg"
+        <img src="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSGIODC_WV062_WestIndianOcean.jpg"
              class="center" />
       </article>
     </div> <!--/ .slide -->
+    <div class="slide" data-anchor="East-IndianOcean">
+      <article>
+        <img src="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSGIODC_WV062_EastIndianOcean.jpg"
+             class="center" />
+      </article>
+    </div> <!--/ .slide -->
+  </div> <!--/ WV062 black'n'white -->
+
+  <!-- BEGIN: MeteoFrance.re storm trajectories. -->
+
+  <div class="section" data-anchor="2018/Eliakim">
+    <article>
+      <h2 class="center">Eliakim (15 mars)</h2>
+      <img src="http://files.meteofrance.com/files/cyclone/SWI$07_20172018.png"
+           class="center"/ >
+    </article>
   </div>
-  <div class="section">
+
+  <div class="section" data-anchor="2018/Dumazile">
     <article>
       <h2 class="center">Dumazile (3 mars)</h2>
       <img src="http://files.meteofrance.com/files/cyclone/SWI$06_20172018.png"
            class="center"/ >
     </article>
   </div>
-  <div class="section">
+
+  <div class="section" data-anchor="2018/Cebile">
     <article>
       <h2 class="center">Cebile (28 janvier)</h2>
       <img src="http://files.meteofrance.com/files/cyclone/SWI$05_20172018.png"
            class="center"/ >
     </article>
   </div>
-  <div class="section">
+
+  <div class="section"  data-anchor="2018/Berguitta">
     <article>
       <h2 class="center">Berguitta (18 janvier)</h2>
       <img src="http://files.meteofrance.com/files/cyclone/SWI$03_20172018.png"
            class="center" />
     </article>
   </div>
-  <div class="section">
+
+  <div class="section"  data-anchor="2018/Irving">
     <article>
       <h2 class="center">Irving (5 janvier)</h2>
       <img src="http://files.meteofrance.com/files/cyclone/SWI$02_20172018.png"
            class="center" />
     </article>
   </div>
-  <div class="section">
+
+  <div class="section"  data-anchor="2018/Ava">
     <article>
       <h2 class="center">Ava (2 janvier)</h2>
       <img src="http://files.meteofrance.com/files/cyclone/SWI$01_20172018.png"
            class="center" />
     </article>
   </div>
-  <div class="section">
+
+  <!-- ^ END: MeteoFrance.re -->
+
+  <!-- EOF last slide -->
+  <div class="section" data-anchor="eof">
     <article style="margin: 10% 20%;">
       <h3>Sources :</h3>
       <ul>
@@ -101,9 +134,11 @@ tags: [wide, no-header]
           MétéoFrance.re : Saison cyclonique en cours</a>.</li>
       <ul>
     </article>
-  </div>
+  </div> <!-- EOF -->
+
 </div> <!--/ #fullpage container. -->
 
+<!-- TODO: use a CDN, remove those locally imported 3rd scripts. -->
 <script type="text/javascript" src="/js/jquery.min.js"></script>
 <script type="text/javascript" src="/js/jquery.fullpage.min.js"></script>
 
@@ -113,9 +148,9 @@ tags: [wide, no-header]
   $(document).ready(function() {
     $('#fullpage').fullpage({
       // sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-      anchors: ["sat-1", "sat-2", 'dumazile', 'cebile', 'berguitta', 'irving', 'ava', 'eof'],
+      //anchors: ["sat-1", "sat-2", 'dumazile', 'cebile', 'berguitta', 'irving', 'ava', 'eof'],
       // menu: '#menu',
-      scrollingSpeed: 125,
+      scrollingSpeed: 100,
       navigation: true,
       navigationPosition: 'right',
       //navigationTooltips: ['First', 'Second', 'Third'],
