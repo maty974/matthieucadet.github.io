@@ -6,7 +6,7 @@
 
 # 1st arg. may be the port number to listen to
 # (note that we bind to all IPs, not just localhost)
-listen_port=${1:-3838}
+listen_port=${1:-1984}
 
 # Restrict the amount of virtual memory, so as to prevent infinite recursion
 # when I'm fiddling with Jekyll "coding". ulimit accepts kilobytes here.
