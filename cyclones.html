@@ -152,19 +152,25 @@ tags: [wide, no-header]
   <!-- ^ END: MeteoFrance.re -->
 
   <!--
-        Windy embeded (iframe)
-                                -->
+        Windy embedded iframe (lazy-loaded)
+                                             -->
 
   <div class="section" data-anchor="Windy">
-    <article>
-      <h2 class="center"><a href="https://www.windy.com/?-19.477,55.942,5">Windy</a></h2>
-      <div class="center">
-        <iframe id="windy-embed"
-                width="650" height="450" frameborder="0"
-                style="border: 1px solid #ddd; height: calc(90vh - 30px); width: calc(100vw - 30px);"
-                src="https://embed.windy.com/embed2.html?lat=-19.477&lon=55.942&zoom=5&level=surface&overlay=wind&menu=&message=true&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&detailLat=-21.100&detailLon=55.600&metricWind=km%2Fh&metricTemp=%C2%B0C" ></iframe>
-      </div> <!--/ .center -->
-    </article>
+    <div class="slide" data-anchor="Windy">
+      <article>
+        <h2 class="center">
+          <a href="https://www.windy.com/?-19.477,55.942,5">
+            Windy (Île de la Réunion)</a>
+        </h2>
+        <div class="center">
+           <iframe id="windy-embed" width="650" height="450" frameborder="0"
+                  style="border: 1px solid #ddd; height: calc(90vh - 30px); width: calc(100vw - 30px);"
+                  src="" ></iframe>
+                  <!-- ^ See JS at EOF which will setup the `src` attribute
+                         once the Windy slide is displayed for the first time. -->
+        </div> <!--/ .center -->
+      </article>
+    </div>
   </div> <!--/ Windy -->
 
 
@@ -198,8 +204,10 @@ tags: [wide, no-header]
 <script src="//cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"
         type="text/javascript"></script>
 
-<script>
+<script type="text/javascript">
   $(document).ready(function() {
+    const windy_embed_link = "https://embed.windy.com/embed2.html?lat=-19.477&lon=55.942&zoom=5&level=surface&overlay=wind&menu=&message=true&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&detailLat=-21.100&detailLon=55.600&metricWind=km%2Fh&metricTemp=%C2%B0C";
+
     $('#fullpage').fullpage({
       // sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
       //anchors: ["sat-1", "sat-2", 'dumazile', 'cebile', 'berguitta', 'irving', 'ava', 'eof'],
@@ -211,7 +219,22 @@ tags: [wide, no-header]
       //responsiveWidth: 768,
       verticalCentered: true,
       continuousVertical: true,
-      continuousHorizontal: true
+      continuousHorizontal: true,
+
+      afterSlideLoad:
+        function(anchorLink, index, slideAnchor, slideIndex) {
+          console.info(" // SLIDE // ", anchorLink, index,
+                                        slideAnchor, slideIndex);
+          // Windy iframe set src=... attribute if needed.
+          if (slideAnchor === "Windy") {
+            const iframe = $('#windy-embed');
+            const has_src = iframe.attr('src') != "";
+            if (! has_src) {
+              console.info("Windy iframe src link set, ok (maybe).");
+              iframe.attr('src', windy_embed_link);
+            }
+          }
+        },
     });
   });
 </script>
