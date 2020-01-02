@@ -1,0 +1,30 @@
+---
+---
+/* FILE: css/fixup.scss
+ * (Style fixes, comes as the last stylesheet in <HEAD> */
+
+.fp-section {
+  .slide.fp-slide {
+    img {
+      max-width: calc(100vw - 120px);
+      max-height: calc(100vh - 10px);
+    }
+  }
+
+  .fp-controlArrow {
+    //border-color: transparent #444 transparent transparent;
+
+    &.fp-prev {
+      left: 62px;
+      border-width: 12.5px 19px 12.5px 0;
+      border-color: transparent #333 transparent transparent;
+    }
+
+    &.fp-next {
+      right: 62px;
+      border-width: 12.5px 0 12.5px 19px;
+      border-color: transparent transparent transparent #333;
+    }
+  }
+}
+/* EOF css/fixup.scss */
