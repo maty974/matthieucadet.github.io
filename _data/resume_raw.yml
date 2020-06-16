@@ -6,21 +6,17 @@ author:
   civil_status : Marié
   language: Français & Anglais
   email: matthieu.cadet@gmail.com
-  tel: +32 472 623 242
-  website: http://matthieucadet.info
+  tel: +262 693 451 806
+  website: https://matthieucadet.info
 
 head_title: Senior Compositing Artist & Technical Director &mdash; 10 ans d'expérience.
 
-head_description: "En poste à nWaveDigital
-(2006 &ndash; 2018), au département “Compositing”
-où ont lieu une variété de post-traitements sur les jeux d'images issues
-du “Lighting”. Rôle clé dans la mise en oeuvre des processus de traitement par
-la réalisation d'outils (en Python principalement) ....."
+head_description: ""
 
 softwares:
   label: Logiciels
   list:
-    - Nuke & Nuke Studio 11
+    - Nuke & Nuke Studio
     - Davinci Resolve
     - Maya
     - Adobe Suite ( Premiere, After Effect, &hellip; )
@@ -65,15 +61,32 @@ education:
 work_experiences:
   label: Expérience Professionnelle
   list:
+    - code: yakari
+      publish: true
+      subject_title: Yakari
+      subject_thumbnail: /static/movie_posters/yakari-poster.jpg
+      subject_type: long metrage d'animation 3D
+      subject_url: "http://www.allocine.fr/film/fichefilm_gen_cfilm=261097.html"
+      tubes: []
+      period_start: 2018-09-01
+      period_end: 2019-10-01
+      job_company: Gao Shan Pictures
+      job_company_url: https://www.gaoshanpictures.com
+      job_title: Lead Compositing | Compositing & Pipeline Developer
+      skills: ['Python','Compositing', 'Lighting','R&D']
+      tasks:
+        - Lead Lighting & Compositing
+        - Développement du pipeline Nuke
+
     - code: the_queens_corgi
       publish: true
       subject_title: The Queen’s Corgi
       subject_thumbnail: /static/movie_posters/queen-corgis-poster.jpg
       subject_type: long metrage d'animation 3D
-      subject_url: null
+      subject_url: "https://www.youtube.com/watch?v=kY6wXDFfqFU"
       tubes: []
       period_start: 2017-01-01
-      period_end: 2018-12-01
+      period_end: 2018-06-01
       job_company: nWave Digital
       job_company_url: http://www.nwave.com
       job_title: Senior Compositing Artist TD & Pipeline Developer

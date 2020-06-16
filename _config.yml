@@ -27,7 +27,7 @@ tagline: |
 description: |
     Senior Compositing Artist, Technical Director & Pipeline Developer
 
-url:                 http://matthieucadet.info
+url:                 https://matthieucadet.info
 baseurl:             ''
 paginate:            5
 
@@ -44,7 +44,7 @@ tracking_id: UA-91587914-1 # GA Tracking ID
 # About/contact
 author:
   name:               Matthieu Cadet
-  url:                http://matthieucadet.info
+  url:                https://matthieucadet.info
   email:              matthieu.cadet@gmail.com
   twitter_username:   maty974
   github_repo:        maty974.github.com
@@ -53,6 +53,6 @@ author:
   #flickr_username:    maty974
   #facebook_username:  maty974
   #instagram_username: maty974
-  tel:                +32 472 623 242
-  location: Brussels,Belgium
-  current_studio: <a href="http://www.nwave.com" target="_blank">nWave Digital</a>
+  tel:                +262 693 451 806
+  location: Saint-Denis, Île de la Réunion
+  current_studio: <a href="https://www.gaoshanpictures.com" target="_blank">Gao Shan Pictures</a>
