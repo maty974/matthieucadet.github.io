@@ -19,7 +19,7 @@ softwares:
     - Nuke & Nuke Studio
     - Davinci Resolve
     - Maya
-    - Adobe Suite ( Premiere, After Effect, &hellip; )
+    - Adobe Suite ( Premiere, After Effect, Photoshop, &hellip; )
 
 programming_skills:
   label: Programmation
@@ -70,9 +70,9 @@ work_experiences:
       tubes: []
       period_start: 2018-09-01
       period_end: 2019-10-01
-      job_company: Gao Shan Pictures
+      job_company: Gao Shan Pictures - Île de La Réunion
       job_company_url: https://www.gaoshanpictures.com
-      job_title: Lead Compositing | Compositing & Pipeline Developer
+      job_title: Lead Lighting | Compositing & Pipeline Developer
       skills: ['Python','Compositing', 'Lighting','R&D']
       tasks:
         - Lead Lighting & Compositing
@@ -87,7 +87,7 @@ work_experiences:
       tubes: []
       period_start: 2017-01-01
       period_end: 2018-06-01
-      job_company: nWave Digital
+      job_company: nWave Digital - Bruxelles
       job_company_url: http://www.nwave.com
       job_title: Senior Compositing Artist TD & Pipeline Developer
       skills: ['Python','Compositing','R&D']
@@ -110,7 +110,7 @@ work_experiences:
         - { id: '015_0030' }
       period_start: 2015-11-01
       period_end: 2016-07-30
-      job_company: nWave Digital
+      job_company: nWave Digital - Bruxelles
       job_company_url: http://www.nwave.com
       job_title: Senior Compositing Artist TD & Pipeline Developer
       skills: ['Python','Compositing','R&D']
@@ -133,7 +133,7 @@ work_experiences:
         - { id: '055_0250' }
       period_start: 2013-11-01
       period_end: 2015-11-30
-      job_company: nWave Digital
+      job_company: nWave Digital - Bruxelles
       job_company_url: http://www.nwave.com
       job_title: Senior Compositing Artist TD & Pipeline Developer
       skills: ['Python','Compositing','R&D']
@@ -158,7 +158,7 @@ work_experiences:
         - { id: '130_0230' }
       period_start: 2012-05-01
       period_end: 2013-11-30
-      job_company: nWave Digital
+      job_company: nWave Digital - Bruxelles
       job_company_url: http://www.nwave.com
       job_title: Senior Compositing Artist TD & Pipeline Developer
       skills: ['Python','Compositing','R&D']
@@ -179,7 +179,7 @@ work_experiences:
         - { id: '070_0100' }
       period_start: 2010-10-01
       period_end: 2012-05-30
-      job_company: nWave Digital
+      job_company: nWave Digital - Bruxelles
       job_company_url: http://www.nwave.com
       job_title: Senior Compositing Artist TD & Pipeline Developer
       skills: ['Python','Compositing','R&D']
@@ -199,7 +199,7 @@ work_experiences:
         - { id: '090_0020' }
       period_start: 2010-03-01
       period_end: 2010-09-30
-      job_company: nWave Digital
+      job_company: nWave Digital - Bruxelles
       job_company_url: http://www.nwave.com
       job_title: Senior Compositing Artist TD & Pipeline Developer
       skills: ['Python','Compositing','R&D']
@@ -220,7 +220,7 @@ work_experiences:
         - { id: '160_0170' }
       period_start: 2009-11-01
       period_end: 2010-03-30
-      job_company: nWave Digital
+      job_company: nWave Digital - Bruxelles
       job_company_url: http://www.nwave.com
       job_title: Senior Compositing Artist TD & Pipeline Developer
       skills: ['Python','Compositing','R&D']
@@ -248,7 +248,7 @@ work_experiences:
         - { id: '230_0210' }
       period_start: 2008-01-01
       period_end: 2009-11-30
-      job_company: nWave Digital
+      job_company: nWave Digital - Bruxelles
       job_company_url: http://www.nwave.com
       job_title: Senior Compositing Artist TD & Pipeline Developer
       skills: ['Python','Compositing','R&D']
@@ -275,7 +275,7 @@ work_experiences:
         - { id: '300_0120' }
       period_start: 2006-05-01
       period_end: 2007-08-30
-      job_company: nWave Digital
+      job_company: nWave Digital - Bruxelles
       job_company_url: http://www.nwave.com
       job_title: Senior Compositing Artist TD & Pipeline Developer
       skills: ['Python','Compositing','R&D']
